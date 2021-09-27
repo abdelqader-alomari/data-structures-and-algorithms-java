@@ -2,8 +2,8 @@
 
 ## Problem Domain:
 
-Write a function which takes an array and return an array with elements in reversed order.
+Write a function called insertShiftArray which takes in an array and a value to be added. Without utilizing any of the built-in methods available to your language, return an array with the new value added at the middle index.
 
-## Whiteboard Challenge Workflow
+## Whiteboard Challenge Workflow:
 
-![array-reverse](https://i.ibb.co/NsgDLLn/array-reverse.jpg)
+![array-reverse](https://i.ibb.co/jDdtRfJ/lab-02.jpg)
