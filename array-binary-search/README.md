@@ -4,4 +4,4 @@ Write a function called BinarySearch which takes in 2 parameters: a sorted array
 
 ## Whiteboard Challenge Workflow:
 
-![array-binary-search](https://i.ibb.co/ykxwB46/Lab3.jpg)
+![array-binary-search](https://i.ibb.co/Lz3pRw1/Lab-3.jpg)
