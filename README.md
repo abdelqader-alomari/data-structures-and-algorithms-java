@@ -1,9 +1,6 @@
-# data-structures-and-algorithms-java
+# Data structures and Algorithms Java
 
-## Problem Domain:
-
-Write a function called insertShiftArray which takes in an array and a value to be added. Without utilizing any of the built-in methods available to your language, return an array with the new value added at the middle index.
-
-## Whiteboard Challenge Workflow:
-
-![array-reverse](https://i.ibb.co/jDdtRfJ/lab-02.jpg)
+| Challenge    | Link                                                                                                                                   |
+| ------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
+| Challenge 01 | [array-reverse](https://github.com/abdelqader-alomari/data-structures-and-algorithms-java/tree/main/array-reverse/README.md)           |
+| Challenge 02 | [array-insert-shift](https://github.com/abdelqader-alomari/data-structures-and-algorithms-java/tree/main/array-insert-shift/README.md) |
