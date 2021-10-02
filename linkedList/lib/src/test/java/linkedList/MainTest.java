@@ -2,13 +2,10 @@ package linkedList;
 
 import org.junit.jupiter.api.Test;
 
-
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class MainTest {
 
-    //CodeChallenge05 Testing methods:
     @Test
     void instantiateLinkedList() {
         LinkedList MyTest = new LinkedList();
@@ -18,61 +15,61 @@ class MainTest {
     @Test
     void canInsert() {
         LinkedList MyTest = new LinkedList();
-        MyTest.insert("a");
-        MyTest.insert("b");
-        MyTest.insert("c");
-        String expected = "{ a } -> { b } -> { c } -> NULL";
+        MyTest.insert("100");
+        MyTest.insert("50");
+        MyTest.insert("20");
+        String expected = "{ 100 } -> { 50 } -> { 20 } -> NULL";
         assertEquals(expected, MyTest.toString());
     }
 
     @Test
     void headPointsRight() {
         LinkedList MyTest = new LinkedList();
-        MyTest.insert("a");
-        MyTest.insert("b");
-        MyTest.insert("c");
-        assertEquals("a", MyTest.head.getData());
+        MyTest.insert("100");
+        MyTest.insert("50");
+        MyTest.insert("20");
+        assertEquals("100", MyTest.head.getData());
     }
 
     @Test
     void canInsertMultiple() {
         LinkedList MyTest = new LinkedList();
-        MyTest.insert("a");
-        MyTest.insert("b");
-        MyTest.insert("c");
-        MyTest.insert("d");
-        String expected = "{ a } -> { b } -> { c } -> { d } -> NULL";
+        MyTest.insert("100");
+        MyTest.insert("50");
+        MyTest.insert("20");
+        MyTest.insert("10");
+        String expected = "{ 100 } -> { 50 } -> { 20 } -> { 10 } -> NULL";
         assertEquals(expected, MyTest.toString());
     }
 
     @Test
     void LinkedListIncludes() {
         LinkedList ll = new LinkedList();
-        ll.insert("a");
-        ll.insert("b");
-        ll.insert("c");
-        assertTrue(ll.includes("b"));
+        ll.insert("100");
+        ll.insert("50");
+        ll.insert("20");
+        assertTrue(ll.includes("50"));
     }
 
     @Test
     void LinkedListDoesntIncludes() {
         LinkedList ll = new LinkedList();
-        ll.insert("a");
-        ll.insert("b");
-        ll.insert("c");
+        ll.insert("100");
+        ll.insert("50");
+        ll.insert("20");
 
-        assertFalse(ll.includes("g"));
-        assertFalse(ll.includes("i"));
+        assertFalse(ll.includes("3"));
+        assertFalse(ll.includes("7"));
     }
 
     @Test
     void includesWorkingFine() {
         LinkedList ll = new LinkedList();
-        ll.insert("a");
-        ll.insert("b");
-        ll.insert("c");
+        ll.insert("100");
+        ll.insert("50");
+        ll.insert("20");
 
-        String expected = "{ a } -> { b } -> { c } -> NULL";
+        String expected = "{ 100 } -> { 50 } -> { 20 } -> NULL";
         assertEquals(expected, ll.toString());
     }
 }
