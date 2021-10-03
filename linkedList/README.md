@@ -21,7 +21,7 @@ while(current != null) {
 
 That will confirm that the next node in the list isn't null
 
-**Space -> o(1)**
+**Space -> O(1)**
 **Time -> O(n)**
 
 ## API
@@ -30,11 +30,20 @@ That will confirm that the next node in the list isn't null
 
 Add a new node with value as an arguments to the head of list.
 
+**Space -> O(1)**
+**Time -> O(1)**
+
 ### includes()
 
 A method indicates whether that certain Node's value exists somewhere within the list and return a true otherwise return false.
+
+**Space -> O(1)**
+**Time -> O(n)**
 
 ### toString()
 
 Returns: a string representing all the values in the Linked List, formatted as:
 "{ a } -> { b } -> { c } -> NULL"
+
+**Space -> O(1)**
+**Time -> O(n)**
