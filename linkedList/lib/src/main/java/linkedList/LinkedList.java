@@ -4,25 +4,20 @@ public class LinkedList {
     Node head;
     private int size;
 
-    public void insert(String data){
-        if(head == null){
-            head= new Node(data);
+    public void insert(String value) {
+        if (head == null) {
+            head = new Node(value);
             size++;
-        }else {
-            Node current = head ;
-            while(current.getNext() != null){
-                current = current.getNext();
-            }
-            Node node = new Node(data);
-            current.setNext(node);
+        } else {
+            Node newNode = new Node(value);
+            newNode.setNext(head);
+            head = newNode;
             size++;
         }
     }
 
-
-    @Override
     public String toString() {
-        String result="";
+        String result = "";
         if (head == null) {
             result = new String("List is empty");
         } else {
@@ -40,9 +35,10 @@ public class LinkedList {
         return result;
 
     }
+
     public boolean includes(String data) {
         Node current = head;
-        while (current!=null) {
+        while (current != null) {
             if (data.equals(current.getData())) {
                 return true;
             }
