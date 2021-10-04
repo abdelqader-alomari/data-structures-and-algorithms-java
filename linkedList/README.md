@@ -6,7 +6,7 @@ Where nodes single connected to each other stated from the head, example: {1} ->
 
 ## Challenge
 
-Create a node class to Create a Linked List and use the methods to add the nodes (insert()), check of a value is in that list (includes()) and print the list content as a String. (toString()) Any exceptions or errors that come from your code should be semantic. and make a test for every possible cases of linked list.
+Create a node class to Create a Linked List and use the methods to add the nodes (insert()), check of a value is in that list (includes()) and print the list content as a String and use append to add at the last, insertBefore to insert an added value before selected value,insertAfter to insert an added value after selected value (toString()) Any exceptions or errors that come from your code should be semantic. and make a test for every possible cases of linked list.
 
 ## Approach & Efficiency
 
@@ -20,6 +20,8 @@ while(current != null) {
 ```
 
 That will confirm that the next node in the list isn't null
+
+and the other methods using for loop... and we take the higher to count the Space and Time, where as the higher:
 
 **Space -> o(1)**
 **Time -> O(n)**
@@ -38,3 +40,30 @@ A method indicates whether that certain Node's value exists somewhere within the
 
 Returns: a string representing all the values in the Linked List, formatted as:
 "{ a } -> { b } -> { c } -> NULL"
+
+### append()
+
+Add a new node with value as an arguments to the last of list.
+
+![Append Whiteboard](./img/challenge6-1.jpg)
+
+**Space -> o(1)**
+**Time -> O(n)**
+
+### insertBefore()
+
+insert new node with value before selected node value
+
+![Append Whiteboard](./img/Challenge6-2.jpg)
+
+**Space -> o(1)**
+**Time -> O(n)**
+
+### insertAfter()
+
+insert new node with value after selected node value
+
+![Append Whiteboard](./img/Challenge6-3.jpg)
+
+**Space -> o(1)**
+**Time -> O(n)**

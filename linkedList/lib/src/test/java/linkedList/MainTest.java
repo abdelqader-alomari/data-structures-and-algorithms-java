@@ -8,38 +8,38 @@ class MainTest {
 
     @Test
     void instantiateLinkedList() {
-        LinkedList MyTest = new LinkedList();
-        assertNull(MyTest.head);
+        LinkedList Test = new LinkedList();
+        assertNull(Test.head);
     }
 
     @Test
     void canInsert() {
-        LinkedList MyTest = new LinkedList();
-        MyTest.insert("20");
-        MyTest.insert("50");
-        MyTest.insert("100");
+        LinkedList Test = new LinkedList();
+        Test.insert("20");
+        Test.insert("50");
+        Test.insert("100");
         String expected = "{ 100 } -> { 50 } -> { 20 } -> NULL";
-        assertEquals(expected, MyTest.toString());
+        assertEquals(expected, Test.toString());
     }
 
     @Test
     void headPointsRight() {
-        LinkedList MyTest = new LinkedList();
-        MyTest.insert("20");
-        MyTest.insert("50");
-        MyTest.insert("100");
-        assertEquals("100", MyTest.head.getData());
+        LinkedList Test = new LinkedList();
+        Test.insert("20");
+        Test.insert("50");
+        Test.insert("100");
+        assertEquals("100", Test.head.getData());
     }
 
     @Test
     void canInsertMultiple() {
-        LinkedList MyTest = new LinkedList();
-        MyTest.insert("10");
-        MyTest.insert("20");
-        MyTest.insert("50");
-        MyTest.insert("100");
+        LinkedList Test = new LinkedList();
+        Test.insert("10");
+        Test.insert("20");
+        Test.insert("50");
+        Test.insert("100");
         String expected = "{ 100 } -> { 50 } -> { 20 } -> { 10 } -> NULL";
-        assertEquals(expected, MyTest.toString());
+        assertEquals(expected, Test.toString());
     }
 
     @Test
@@ -72,4 +72,44 @@ class MainTest {
         String expected = "{ 100 } -> { 50 } -> { 20 } -> NULL";
         assertEquals(expected, ll.toString());
     }
+
+    @Test
+    public void isEmptyTest() {
+        LinkedList testList = new LinkedList();
+    }
+
+    @Test
+    public void addAtEnd() {
+        LinkedList Test = new LinkedList();
+        Test.insert("20");
+        Test.insert("50");
+        Test.insert("80");
+        Test.append("100");
+        String expected = "{ 80 } -> { 50 } -> { 20 } -> { 100 } -> NULL";
+        assertEquals(expected, Test.toString());
+    }
+
+    @Test
+    public void addBefore() {
+        LinkedList Test = new LinkedList();
+        Test.insert("20");
+        Test.insert("50");
+        Test.insert("100");
+        Test.insertBefore("50", "70");
+        String expected = "{ 100 } -> { 70 } -> { 50 } -> { 20 } -> NULL";
+        assertEquals(expected, Test.toString());
+    }
+
+    @Test
+    public void addAfter() {
+
+        LinkedList Test = new LinkedList();
+        Test.insert("20");
+        Test.insert("50");
+        Test.insert("100");
+        Test.insertAfter("50", "30");
+        String expected = "{ 100 } -> { 50 } -> { 30 } -> { 20 } -> NULL";
+        assertEquals(expected, Test.toString());
+    }
+
 }

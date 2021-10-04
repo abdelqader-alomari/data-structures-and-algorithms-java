@@ -7,7 +7,13 @@ public class Main {
         list.insert("50");
         list.insert("100");
 
+        list.append("5");
+        list.insertBefore("50","10");
+        list.insertAfter("20","3");
+
         System.out.println(list.toString());
         System.out.println(list.includes("90"));
+
     }
 }
+

@@ -48,4 +48,52 @@ public class LinkedList {
 
     }
 
+    public void append(String data) {
+        if (head == null) {
+            Node node = new Node(data);
+            head = node;
+        } else {
+            Node current = head;
+            while (current.getNext() != null) {
+                current = current.getNext();
+            }
+            Node node = new Node(data);
+            current.setNext(node);
+        }
+    }
+
+    public void insertBefore(String data,String before) {
+        Node node = new Node(before);
+        if (head == null) {
+            head = node;
+        } else if (data == head.getData()) {
+            node.next = head;
+            head = node;
+        } else {
+            Node temp = head;
+            while (temp.next.getData() != data) {
+                temp = temp.next;
+            }
+            node.next = temp.next;
+            temp.next = node;
+        }
+
+    }
+
+    public void insertAfter(String data , String after){
+        Node node = new Node(after);
+        if (head == null) {
+            head = node;
+        }else {
+            Node temp = head;
+            while (temp.getData() != data) {
+                temp = temp.next;
+            }
+            node.next = temp.next;
+            temp.next = node;
+        }
+
+    }
+
+
 }
