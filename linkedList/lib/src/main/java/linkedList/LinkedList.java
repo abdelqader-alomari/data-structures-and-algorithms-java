@@ -119,4 +119,32 @@ public class LinkedList {
         return current.getData();
     }
 
+    public LinkedList zip(LinkedList list1 , LinkedList list2){
+        LinkedList newList = new LinkedList();
+        Node current1 = list1.head;
+        Node current2 = list2.head;
+
+        while(current1 != null || current2 != null)
+        {
+            if(current1 != null && current2 != null)
+            {
+                newList.append(current1.getData());
+                newList.append(current2.getData());
+ 
+                current1=current1.next;
+                current2=current2.next;
+            }
+            else if (current1 == null)
+            {
+                newList.append(current2.getData());
+                current2=current2.next;
+            }
+            else if (current2 == null)
+            {
+                newList.append(current1.getData());
+                current1=current1.next;
+            }
+        }
+        return newList;
+     }
 }

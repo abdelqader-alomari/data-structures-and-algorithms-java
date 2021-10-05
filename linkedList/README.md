@@ -21,6 +21,7 @@ while(current != null) {
 
 That will confirm that the next node in the list isn't null
 
+<<<<<<< HEAD
 and the other methods using for loop... and we take the higher to count the Space and Time, where as the higher:
 
 **Space -> o(1)**
@@ -47,6 +48,7 @@ A method indicates whether that certain Node's value exists somewhere within the
 Returns: a string representing all the values in the Linked List, formatted as:
 "{ a } -> { b } -> { c } -> NULL"
 
+<<<<<<< HEAD
 **Space -> o(1)**
 **Time -> O(n)**
 
@@ -82,6 +84,15 @@ insert new node with value after selected node value
 Return the value of given int k as a parameter which is placed from tail toward head.
 
 ![kth Whiteboard](./img/challenge7.jpg)
+
+**Space -> o(1)**
+**Time -> O(n)**
+
+## linked-list-zip
+
+Make a method which Zip two linked lists together into one so that the nodes alternate between the two lists and return a reference to the head of the zipped list.
+
+![linked-list-zip-whiteborad](./img/challenge8.jpg)
 
 **Space -> o(1)**
 **Time -> O(n)**

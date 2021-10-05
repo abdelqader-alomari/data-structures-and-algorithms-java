@@ -162,4 +162,24 @@ class MainTest {
 
         assertEquals("Happy Path", Test.linkedListKth(1));
     }
+
+    @Test
+    public void linkedListZip() {
+        LinkedList list1 = new LinkedList();
+        list1.append("1");
+        list1.append("3");
+        list1.append("5");
+
+
+        LinkedList list2 = new LinkedList();
+        list2.append("2");
+        list2.append("4");
+
+        LinkedList newList = new LinkedList();
+        newList = newList.zip(list1,list2);
+        System.out.println(newList);
+
+        assertEquals("{ 1 } -> { 2 } -> { 3 } -> { 4 } -> { 5 } -> NULL", newList.zip(list1,list2).toString());
+    }
+
 }

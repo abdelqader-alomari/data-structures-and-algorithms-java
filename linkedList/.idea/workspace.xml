@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ea698ffc-c38b-4ca1-a41a-3dbc3920d880" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/out/production/classes/linkedList/LinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib/out/production/classes/linkedList/LinkedList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/out/production/classes/linkedList/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib/out/production/classes/linkedList/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/out/production/classes/linkedList/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib/out/production/classes/linkedList/Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/out/test/classes/linkedList/LibraryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib/out/test/classes/linkedList/LibraryTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/linkedList/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/linkedList/LinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/linkedList/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/linkedList/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/test/java/linkedList/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/test/java/linkedList/MainTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,12 +103,12 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="Tests.includesWorkingFine" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="MainTest.linkedListZip" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;linkedList.Tests.includesWorkingFine&quot;" />
+        <option name="scriptParameters" value="--tests &quot;linkedList.MainTest.linkedListZip&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -115,17 +124,53 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="MainTest.kthhappyPath" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="linkedList.lib.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="linkedList.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="linkedList" />
+      <option name="MAIN_CLASS_NAME" value="linkedList.MainTest" />
+      <option name="METHOD_NAME" value="kthhappyPath" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainTest.linkedListZip" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="linkedList.lib.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="linkedList.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="linkedList" />
+      <option name="MAIN_CLASS_NAME" value="linkedList.MainTest" />
+      <option name="METHOD_NAME" value="linkedListZip" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="Gradle.MainTest.instantiateLinkedList" />
-      <item itemvalue="Gradle.Tests.includesWorkingFine" />
       <item itemvalue="Gradle.MainTest.addAfter" />
+      <item itemvalue="JUnit.MainTest.linkedListZip" />
+      <item itemvalue="JUnit.MainTest.kthhappyPath" />
+      <item itemvalue="Gradle.MainTest.linkedListZip" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.MainTest.linkedListZip" />
         <item itemvalue="Gradle.MainTest.addAfter" />
+        <item itemvalue="JUnit.MainTest.kthhappyPath" />
+        <item itemvalue="JUnit.MainTest.linkedListZip" />
         <item itemvalue="Gradle.MainTest.instantiateLinkedList" />
-        <item itemvalue="Gradle.Tests.includesWorkingFine" />
       </list>
     </recent_temporary>
   </component>
