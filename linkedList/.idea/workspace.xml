@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ea698ffc-c38b-4ca1-a41a-3dbc3920d880" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/main/java/linkedList/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/linkedList/LinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/main/java/linkedList/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/linkedList/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/main/java/linkedList/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/linkedList/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/test/java/linkedList/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/test/java/linkedList/MainTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +42,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
-  <component name="RunManager" selected="Gradle.MainTest.addAfter">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />

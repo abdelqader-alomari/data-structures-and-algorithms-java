@@ -112,4 +112,54 @@ class MainTest {
         assertEquals(expected, Test.toString());
     }
 
+    @Test
+    public void kth2() {
+        LinkedList Test = new LinkedList();
+        Test.insert("50");
+        Test.insert("70");
+        assertEquals("Exception", Test.linkedListKth(2));
+    }
+
+    @Test
+    public void linkedListKth() {
+        LinkedList Test = new LinkedList();
+
+        Test.append("T");
+        Test.append("o");
+        Test.append("d");
+        Test.append("a");
+        Test.append("y");
+        Test.append("5/10");
+        Test.append("W");
+        Test.append("e");
+        Test.append("h");
+        Test.append("a");
+        Test.append("v");
+        Test.append("e");
+        Test.append("");
+        Test.append("B");
+        Test.append("i");
+        Test.append("r");
+        Test.append("t");
+        Test.append("h");
+        Test.append("d");
+        Test.append("a");
+        Test.append("y");
+        Test.append("P");
+        Test.append("a");
+        Test.append("r");
+        Test.append("t");
+        Test.append("y");
+        assertEquals("5/10", Test.linkedListKth(19));
+    }
+
+    @Test
+    public void kthhappyPath() {
+        LinkedList Test = new LinkedList();
+        Test.insert("Happy Path");
+        Test.insertAfter("Happy Path", "Regular Path");
+        Test.insert("Bad Path");
+
+        assertEquals("Happy Path", Test.linkedListKth(1));
+    }
 }

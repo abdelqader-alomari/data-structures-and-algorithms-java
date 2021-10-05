@@ -32,14 +32,23 @@ and the other methods using for loop... and we take the higher to count the Spac
 
 Add a new node with value as an arguments to the head of list.
 
+**Space -> o(1)**
+**Time -> O(1)**
+
 ### includes()
 
 A method indicates whether that certain Node's value exists somewhere within the list and return a true otherwise return false.
+
+**Space -> o(1)**
+**Time -> O(n)**
 
 ### toString()
 
 Returns: a string representing all the values in the Linked List, formatted as:
 "{ a } -> { b } -> { c } -> NULL"
+
+**Space -> o(1)**
+**Time -> O(n)**
 
 ### append()
 
@@ -54,7 +63,7 @@ Add a new node with value as an arguments to the last of list.
 
 insert new node with value before selected node value
 
-![Append Whiteboard](./img/Challenge6-2.jpg)
+![insertBefore Whiteboard](./img/Challenge6-2.jpg)
 
 **Space -> o(1)**
 **Time -> O(n)**
@@ -63,7 +72,16 @@ insert new node with value before selected node value
 
 insert new node with value after selected node value
 
-![Append Whiteboard](./img/Challenge6-3.jpg)
+![insertAfter Whiteboard](./img/Challenge6-3.jpg)
+
+**Space -> o(1)**
+**Time -> O(n)**
+
+## linked-list-kth
+
+Return the value of given int k as a parameter which is placed from tail toward head.
+
+![kth Whiteboard](./img/challenge7.jpg)
 
 **Space -> o(1)**
 **Time -> O(n)**

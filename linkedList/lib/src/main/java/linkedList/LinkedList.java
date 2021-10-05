@@ -2,7 +2,12 @@ package linkedList;
 
 public class LinkedList {
     Node head;
+    public Node current;
     private int size;
+
+    public int getSize() {
+        return size;
+    }
 
     public void insert(String value) {
         if (head == null) {
@@ -59,10 +64,11 @@ public class LinkedList {
             }
             Node node = new Node(data);
             current.setNext(node);
+            size++;
         }
     }
 
-    public void insertBefore(String data,String before) {
+    public void insertBefore(String data, String before) {
         Node node = new Node(before);
         if (head == null) {
             head = node;
@@ -76,24 +82,41 @@ public class LinkedList {
             }
             node.next = temp.next;
             temp.next = node;
+            size++;
         }
 
     }
 
-    public void insertAfter(String data , String after){
+    public void insertAfter(String data, String after) {
         Node node = new Node(after);
         if (head == null) {
             head = node;
-        }else {
+        } else {
             Node temp = head;
             while (temp.getData() != data) {
                 temp = temp.next;
             }
             node.next = temp.next;
             temp.next = node;
+            size++;
         }
 
     }
 
+    public String linkedListKth(int k) {
+        Node current = head;
+        if (head == null) {
+            System.out.println("The list is empty");
+        }
+        if (k > getSize() - 1 || k < 0) {
+            return "Exception";
+        }
+        int i = 0;
+        while (i < (getSize() - 1 - k)) {
+            current = current.getNext();
+            i++;
+        }
+        return current.getData();
+    }
 
 }
