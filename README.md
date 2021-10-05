@@ -7,3 +7,4 @@
 | Challenge 03 | [array-binary-search](https://github.com/abdelqader-alomari/data-structures-and-algorithms-java/tree/main/array-binary-search/README.md)           |
 | Challenge 05 | [linked-list](https://github.com/abdelqader-alomari/data-structures-and-algorithms-java/tree/linked-list/linkedList/lib/src)                       |
 | Challenge 06 | [linked-list-insertions](https://github.com/abdelqader-alomari/data-structures-and-algorithms-java/tree/linked-list-insertions/linkedList/lib/src) |
+| Challenge 07 | [linked-list-kth](https://github.com/abdelqader-alomari/data-structures-and-algorithms-java/tree/linked-list-kth/linkedList/lib/src) |
