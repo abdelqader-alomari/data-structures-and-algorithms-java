@@ -22,8 +22,6 @@ public class Main {
         System.out.println(stack.pop());
         System.out.println(stack.pop());
 
-
-
         Queue queue = new Queue();
 
         queue.enqueue("O");
@@ -31,7 +29,6 @@ public class Main {
         queue.enqueue("A");
         queue.enqueue("R");
         queue.enqueue("I");
-
 
         System.out.println(queue.dequeue());
         System.out.println(queue.dequeue());
@@ -41,8 +38,6 @@ public class Main {
         System.out.println(queue.dequeue());
         System.out.println(queue.dequeue());
 
-
     }
-
 
 }

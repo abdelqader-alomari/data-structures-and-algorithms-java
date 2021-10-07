@@ -16,7 +16,7 @@ public class Queue {
 
     public String dequeue() {
         if (isEmpty()) {
-            return "Queue is empty";
+            return null;
         } else {
             String data = front.getData();
             front = front.getNext();
@@ -29,20 +29,21 @@ public class Queue {
     }
 
     public boolean isEmpty(){
-        return front == null;
+        return front ==null;
     }
 
     @Override
     public String toString() {
-        if (front == null) return "Queue is empty";
-        String result = "Front = ";
+        if (front == null) return "null";
+        String result = "Queue:";
         Node current = front;
         while (current != null){
-            result += current.data+ " -> ";
+            result += " Node{" +
+                    "data='" + current.data + '\'' +
+                    '}';
+            ;
             current = current.next;
         }
-        result += "Null";
-        return dequeue();
+        return result;
     }
-
 }

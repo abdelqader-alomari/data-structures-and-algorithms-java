@@ -41,7 +41,6 @@ public class Stack<I extends Number> {
             output += current.data+ " -> ";
             current = current.next;
         }
-        output += "Null";
         return output;
     }
 
