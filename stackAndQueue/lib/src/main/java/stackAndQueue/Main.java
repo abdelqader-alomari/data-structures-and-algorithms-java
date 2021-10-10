@@ -38,6 +38,30 @@ public class Main {
         System.out.println(queue.dequeue());
         System.out.println(queue.dequeue());
 
+
+
+
+
+        PseudoQueue PseudoQueue = new PseudoQueue();
+        System.out.println("Push");
+
+        System.out.println(PseudoQueue.enqueue("A"));
+        System.out.println(PseudoQueue.enqueue("B"));
+        System.out.println(PseudoQueue.enqueue("O"));
+        System.out.println(PseudoQueue.enqueue("U"));
+        System.out.println(PseudoQueue.enqueue("D"));
+
+        System.out.println("*************************************************");
+
+
+        System.out.println("Pop");
+        System.out.println(PseudoQueue.dequeue());
+        System.out.println(PseudoQueue.dequeue());
+        System.out.println(PseudoQueue.dequeue());
+        System.out.println(PseudoQueue.dequeue());
+        System.out.println(PseudoQueue.dequeue());
+
+
     }
 
 }
