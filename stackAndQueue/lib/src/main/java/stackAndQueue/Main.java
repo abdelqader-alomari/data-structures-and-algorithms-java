@@ -43,20 +43,22 @@ public class Main {
 
 
         PseudoQueue PseudoQueue = new PseudoQueue();
-        System.out.println("Push");
 
-        System.out.println(PseudoQueue.enqueue("A"));
-        System.out.println(PseudoQueue.enqueue("B"));
-        System.out.println(PseudoQueue.enqueue("O"));
-        System.out.println(PseudoQueue.enqueue("U"));
-        System.out.println(PseudoQueue.enqueue("D"));
+        System.out.println("Push Start here: ");
+        PseudoQueue.enqueue("A");
+        PseudoQueue.enqueue("B");
+        PseudoQueue.enqueue("O");
+        PseudoQueue.enqueue("U");
+        PseudoQueue.enqueue("D");
+        System.out.println(PseudoQueue);
 
-        System.out.println("*************************************************");
+        System.out.println("*------------------------------------*");
 
 
-        System.out.println("Pop");
+        System.out.println("Pop Start Here:");
         System.out.println(PseudoQueue.dequeue());
         System.out.println(PseudoQueue.dequeue());
+        System.out.println(PseudoQueue);
         System.out.println(PseudoQueue.dequeue());
         System.out.println(PseudoQueue.dequeue());
         System.out.println(PseudoQueue.dequeue());

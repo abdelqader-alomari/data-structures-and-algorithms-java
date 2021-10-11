@@ -1,10 +1,9 @@
 package stackAndQueue;
 
-import java.util.Stack;
 
 public class PseudoQueue {
-    java.util.Stack stackOne = new java.util.Stack();
-    java.util.Stack stackTwo = new Stack();
+    Stack stackOne = new Stack();
+    Stack stackTwo = new Stack();
 
     public String enqueue(String data) {
         while (!stackTwo.isEmpty()) {
@@ -20,11 +19,17 @@ public class PseudoQueue {
 
     public String dequeue() {
         if (stackTwo == null) {
-            System.out.println("Stack is empty");
+            System.out.println("The stack is empty");
         }
-        String data = (String) stackTwo.peek();
+        String data = stackTwo.peek();
         stackTwo.pop();
         return data;
     }
 
+    @Override
+    public String toString() {
+        return "PseudoQueue{" +
+                "stackTwo=" + stackTwo +
+                '}';
+    }
 }

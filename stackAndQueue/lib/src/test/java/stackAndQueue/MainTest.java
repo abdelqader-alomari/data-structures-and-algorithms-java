@@ -127,4 +127,21 @@ class MainTest {
         assertNull(test.dequeue());
     }
 
+
+    @Test void pseudoQueueEmpty() {
+        PseudoQueue test = new PseudoQueue();
+        assertEquals("The stack is empty", test.dequeue());
+    }
+    @Test void pseduQueueEnqueueDequeue(){
+        PseudoQueue test = new PseudoQueue();
+        test.enqueue("100");
+        test.enqueue("80");
+        test.enqueue("60");
+        test.enqueue("40");
+        test.enqueue("20");
+
+        assertEquals("100", test.dequeue());
+        test.dequeue();
+        assertEquals("60", test.dequeue());
+    }
 }

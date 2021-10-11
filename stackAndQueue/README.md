@@ -46,3 +46,16 @@
 - Peek (O1): returns the front Node of the queue.
 
 - isEmpty(): Boolean indicating whether or not the queue is empty.
+
+## Stack-queue-pseudo
+
+Problem Domain:
+
+Create a class that works as a pseudo queue which has stack's enqueue and dequeue methods
+
+Complicity:
+
+enqueue: Space O(1), Time O(n)
+dequeue: Space O(1), Time O(1)
+
+![Stack-queue-pseudo](pseudoQueue.jpg)
