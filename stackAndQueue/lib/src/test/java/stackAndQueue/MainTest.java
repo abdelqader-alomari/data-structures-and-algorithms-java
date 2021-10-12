@@ -127,12 +127,14 @@ class MainTest {
         assertNull(test.dequeue());
     }
 
-
-    @Test void pseudoQueueEmpty() {
+    @Test
+    void pseudoQueueEmpty() {
         PseudoQueue test = new PseudoQueue();
         assertEquals("The stack is empty", test.dequeue());
     }
-    @Test void pseduQueueEnqueueDequeue(){
+
+    @Test
+    void pseduQueueEnqueueDequeue() {
         PseudoQueue test = new PseudoQueue();
         test.enqueue("100");
         test.enqueue("80");
@@ -145,15 +147,14 @@ class MainTest {
         assertEquals("60", test.dequeue());
     }
 
-
     @Test
     void dequeueAnimalShelter() {
         AnimalShelter test = new AnimalShelter();
         assertNull(test.dequeue(""));
     }
 
-
-    @Test void AnimalShelterEnqueueDequeue(){
+    @Test
+    void AnimalShelterEnqueueDequeue() {
         AnimalShelter test = new AnimalShelter();
         Animal cat1 = new Cat("katte");
         Animal cat2 = new Cat("luce");
@@ -167,13 +168,35 @@ class MainTest {
         test.enqueue(dog1);
         test.enqueue(dog2);
 
-        assertEquals("AnimalShelter{cat=Queue: Node{data='katte'} Node{data='luce'} Node{data='ketty'}, dog=Queue: Node{data='Tom'} Node{data='Rex'}}", test.toString());
+        assertEquals(
+                "AnimalShelter{cat=Queue: Node{data='katte'} Node{data='luce'} Node{data='ketty'}, dog=Queue: Node{data='Tom'} Node{data='Rex'}}",
+                test.toString());
         test.dequeue("cat");
 
-        assertEquals("AnimalShelter{cat=Queue: Node{data='luce'} Node{data='ketty'}, dog=Queue: Node{data='Tom'} Node{data='Rex'}}", test.toString());
+        assertEquals(
+                "AnimalShelter{cat=Queue: Node{data='luce'} Node{data='ketty'}, dog=Queue: Node{data='Tom'} Node{data='Rex'}}",
+                test.toString());
 
         test.dequeue("dog");
-        assertEquals("AnimalShelter{cat=Queue: Node{data='luce'} Node{data='ketty'}, dog=Queue: Node{data='Rex'}}", test.toString());
+        assertEquals("AnimalShelter{cat=Queue: Node{data='luce'} Node{data='ketty'}, dog=Queue: Node{data='Rex'}}",
+                test.toString());
 
     }
+
+    @Test
+    public void validateBracketsTest() {
+
+        StackAndQueueBrackets test = new StackAndQueueBrackets();
+
+        assertTrue(test.bracketsValidation("{}")); // true
+        assertFalse(test.bracketsValidation("{}}")); // false = false
+        assertTrue(test.bracketsValidation("{}(){}")); // true
+        assertTrue(test.bracketsValidation("()[[Extra Characters]]")); // true
+        assertFalse(test.bracketsValidation("{(})")); // false = false
+        assertTrue(test.bracketsValidation("(){}[[]]")); // true
+        assertFalse(test.bracketsValidation("(](")); // false = false
+        assertTrue(test.bracketsValidation("{}{Code}[Fellows](())")); // true
+
+    }
+
 }

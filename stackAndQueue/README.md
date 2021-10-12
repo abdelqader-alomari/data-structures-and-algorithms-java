@@ -73,3 +73,17 @@ enqueue: Space O(1), Time O(1)
 dequeue: Space O(1), Time O(1)
 
 ![Stack-queue-pseudo](challenge-12.jpg)
+
+## Stack-queue-brackets
+
+### Problem Domain:
+
+Write a method called Brackets validation which takes a string of brackets as argument and return boolean value that represent if brackets are equivalent or not.
+
+### Complicity
+
+Space : O(1)
+
+Time : O(n)
+
+![Stack-queue-brackets](challenge-13.jpg)

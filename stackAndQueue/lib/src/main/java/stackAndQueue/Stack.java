@@ -1,15 +1,15 @@
 package stackAndQueue;
 
 public class Stack<I extends Number> {
-     private Node top;
+    private Node top;
 
-    public void push(String data){
+    public void push(String data) {
         Node node = new Node(data);
         node.next = top;
         top = node;
     }
 
-    public String  pop() {
+    public String pop() {
         if (isEmpty()) {
             return "The stack is empty";
         } else {
@@ -27,18 +27,20 @@ public class Stack<I extends Number> {
         }
     }
 
-    public boolean isEmpty(){
-        if (top == null) return true;
+    public boolean isEmpty() {
+        if (top == null)
+            return true;
         return false;
     }
 
     @Override
     public String toString() {
-        if (top == null) return "null";
+        if (top == null)
+            return "null";
         String output = "Top = ";
         Node current = top;
-        while (current != null){
-            output += current.data+ " -> ";
+        while (current != null) {
+            output += current.data + " -> ";
             current = current.next;
         }
         return output;

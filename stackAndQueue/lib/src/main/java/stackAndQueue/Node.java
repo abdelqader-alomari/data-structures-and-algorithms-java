@@ -4,8 +4,8 @@ public class Node {
     String data;
     Node next;
 
-    public Node(String data) {
-        this.data = data;
+    public Node(String data2) {
+        this.data = data2;
     }
 
     public String getData() {
@@ -26,9 +26,6 @@ public class Node {
 
     @Override
     public String toString() {
-        return "Node{" +
-                "data='" + data + '\'' +
-                '}';
+        return "Node{" + "data='" + data + '\'' + '}';
     }
 }
-

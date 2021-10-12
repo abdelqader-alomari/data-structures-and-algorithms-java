@@ -38,10 +38,6 @@ public class Main {
         System.out.println(queue.dequeue());
         System.out.println(queue.dequeue());
 
-
-
-
-
         PseudoQueue PseudoQueue = new PseudoQueue();
 
         System.out.println("Push Start here: ");
@@ -53,7 +49,6 @@ public class Main {
         System.out.println(PseudoQueue);
 
         System.out.println("*------------------------------------*");
-
 
         System.out.println("Pop Start Here:");
         System.out.println(PseudoQueue.dequeue());
@@ -83,6 +78,19 @@ public class Main {
 
         animalShelter.dequeue("dog");
         System.out.println(animalShelter);
+
+        System.out.println("*----------------------------------------------------------*");
+
+        StackAndQueueBrackets stackQueueBrackets = new StackAndQueueBrackets();
+
+        System.out.println(stackQueueBrackets.bracketsValidation("{}")); // true
+        System.out.println(stackQueueBrackets.bracketsValidation("{}}")); // false
+        System.out.println(stackQueueBrackets.bracketsValidation("{}(){}")); // true
+        System.out.println(stackQueueBrackets.bracketsValidation("()[[Extra Characters]]")); // true
+        System.out.println(stackQueueBrackets.bracketsValidation("{(})")); // false
+        System.out.println(stackQueueBrackets.bracketsValidation("(){}[[]]")); // true
+        System.out.println(stackQueueBrackets.bracketsValidation("(](")); // false
+        System.out.println(stackQueueBrackets.bracketsValidation("{}{Code}[Fellows](())")); // true
     }
 
 }
