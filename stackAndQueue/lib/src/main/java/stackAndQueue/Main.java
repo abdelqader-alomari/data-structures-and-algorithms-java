@@ -63,7 +63,26 @@ public class Main {
         System.out.println(PseudoQueue.dequeue());
         System.out.println(PseudoQueue.dequeue());
 
+        AnimalShelter animalShelter = new AnimalShelter();
+        Animal cat1 = new Cat("katte");
+        Animal cat2 = new Cat("luce");
+        Animal cat3 = new Cat("ketty");
+        Animal dog1 = new Dog("Tom");
+        Animal dog2 = new Dog("Rex");
 
+        animalShelter.enqueue(cat1);
+        animalShelter.enqueue(dog2);
+        animalShelter.enqueue(cat3);
+        animalShelter.enqueue(cat2);
+        animalShelter.enqueue(dog1);
+
+        System.out.println(animalShelter);
+
+        animalShelter.dequeue("cat");
+        System.out.println(animalShelter);
+
+        animalShelter.dequeue("dog");
+        System.out.println(animalShelter);
     }
 
 }

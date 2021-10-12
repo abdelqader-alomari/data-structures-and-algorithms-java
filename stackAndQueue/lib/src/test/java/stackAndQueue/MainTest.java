@@ -144,4 +144,36 @@ class MainTest {
         test.dequeue();
         assertEquals("60", test.dequeue());
     }
+
+
+    @Test
+    void dequeueAnimalShelter() {
+        AnimalShelter test = new AnimalShelter();
+        assertNull(test.dequeue(""));
+    }
+
+
+    @Test void AnimalShelterEnqueueDequeue(){
+        AnimalShelter test = new AnimalShelter();
+        Animal cat1 = new Cat("katte");
+        Animal cat2 = new Cat("luce");
+        Animal cat3 = new Cat("ketty");
+        Animal dog1 = new Dog("Tom");
+        Animal dog2 = new Dog("Rex");
+
+        test.enqueue(cat1);
+        test.enqueue(cat2);
+        test.enqueue(cat3);
+        test.enqueue(dog1);
+        test.enqueue(dog2);
+
+        assertEquals("AnimalShelter{cat=Queue: Node{data='katte'} Node{data='luce'} Node{data='ketty'}, dog=Queue: Node{data='Tom'} Node{data='Rex'}}", test.toString());
+        test.dequeue("cat");
+
+        assertEquals("AnimalShelter{cat=Queue: Node{data='luce'} Node{data='ketty'}, dog=Queue: Node{data='Tom'} Node{data='Rex'}}", test.toString());
+
+        test.dequeue("dog");
+        assertEquals("AnimalShelter{cat=Queue: Node{data='luce'} Node{data='ketty'}, dog=Queue: Node{data='Rex'}}", test.toString());
+
+    }
 }

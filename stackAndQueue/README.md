@@ -59,3 +59,17 @@ enqueue: Space O(1), Time O(n)
 dequeue: Space O(1), Time O(1)
 
 ![Stack-queue-pseudo](pseudoQueue.jpg)
+
+---
+
+## Stack-queue-animal-shelter
+
+Problem Domain:
+
+Write a method called Animal shelter which takes only dogs and cats, where the shelter operates using First in - First
+out approach Complicity:
+
+enqueue: Space O(1), Time O(1)
+dequeue: Space O(1), Time O(1)
+
+![Stack-queue-pseudo](challenge-12.jpg)
