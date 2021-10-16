@@ -1,0 +1,19 @@
+<changelist name="Uncommitted_changes_before_Checkout_at_10_17_2021_12_29_AM_[Changes]1" date="1634419751987" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_17_2021_12_29_AM_[Changes]1/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 10/17/2021 12:29 AM [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="linkedList/lib/bin/test/linkedList/MainTest.class" />
+    <option name="AFTER_PATH" value="linkedList/lib/bin/test/linkedList/MainTest.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_17_2021_12_29_AM_[Changes]1/MainTest.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="linkedList/lib/bin/main/linkedList/Main.class" />
+    <option name="AFTER_PATH" value="linkedList/lib/bin/main/linkedList/Main.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_17_2021_12_29_AM_[Changes]1/Main.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="linkedList/lib/bin/main/linkedList/LinkedList.class" />
+    <option name="AFTER_PATH" value="linkedList/lib/bin/main/linkedList/LinkedList.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_17_2021_12_29_AM_[Changes]1/LinkedList.class" />
+  </binary>
+</changelist>
