@@ -74,14 +74,14 @@ public class BinaryTree<T> {
         if (isEmpty()) {
             return 0;
         }
-        int maxValue = 0;
-        ArrayList<T> findMax = preOrder();
-        for (int i = 0; i < findMax.size(); i++) {
-            if(Integer.parseInt(findMax.get(i) + "") > maxValue){
-                maxValue = Integer.parseInt(findMax.get(i) + "");
+        int max = 0;
+        ArrayList<T> maxArray = preOrder();
+        for (int i = 0; i < maxArray.size(); i++) {
+            if(Integer.parseInt(maxArray.get(i) + "") > max){
+                max = Integer.parseInt(maxArray.get(i) + "");
             }
         }
-        return  maxValue;
+        return  max;
     }
 
 
