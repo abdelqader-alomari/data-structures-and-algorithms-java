@@ -11,17 +11,25 @@ public class App {
 
     public static void main(String[] args) {
 
-        BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
-        binarySearchTree.insert(30);
-        binarySearchTree.insert(10);
-        binarySearchTree.insert(50);
-        binarySearchTree.insert(15);
-        binarySearchTree.insert(20);
-        System.out.println(binarySearchTree);
-//    System.out.println(binarySearchTree.preOrder(binarySearchTree.getRoot()));
-        System.out.println(binarySearchTree.inOrder(binarySearchTree.getRoot()));
-//    System.out.println(binarySearchTree.postOrder(binarySearchTree.getRoot()));
-        System.out.println(binarySearchTree.contains(40));
+//        BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
+//        binarySearchTree.insert(30);
+//        binarySearchTree.insert(10);
+//        binarySearchTree.insert(50);
+//        binarySearchTree.insert(15);
+//        binarySearchTree.insert(20);
+//        System.out.println(binarySearchTree);
+////    System.out.println(binarySearchTree.preOrder(binarySearchTree.getRoot()));
+//        System.out.println(binarySearchTree.inOrder(binarySearchTree.getRoot()));
+////    System.out.println(binarySearchTree.postOrder(binarySearchTree.getRoot()));
+//        System.out.println(binarySearchTree.contains(40));
+
+
+        BinarySearchTree<Integer> test = new BinarySearchTree<>(5);
+        test.getRoot().getLeft()=new Node<>(3);
+        test.getRoot().getRight()=new Node<>(6);
+        test.getRoot().getLeft().getLeft()=new Node<>(2);
+        test.getRoot().getLeft().getLeft()=new Node<>(4);
+
 
     }
 
