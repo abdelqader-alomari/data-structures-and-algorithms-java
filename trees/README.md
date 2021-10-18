@@ -50,4 +50,4 @@ treemax() : find the max value in binary tree by compare the max root with max l
 
 ### Approach and Efficiency
 
-treemax(): Time: O(1). Space: O(1).
+treemax(): Time: O(n). Space: O(1).
