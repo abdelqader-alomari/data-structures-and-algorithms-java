@@ -11,31 +11,36 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    @Test void appHasAGreeting() {
+    @Test
+    void appHasAGreeting() {
         App classUnderTest = new App();
         assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
     }
+
     @Test
     void testEmptyTree() {
         BinarySearchTree test = new BinarySearchTree();
         assertNull(test.getRoot());
     }
+
     @Test
     void testTreeWithSingleRoot() {
         BinarySearchTree test = new BinarySearchTree();
         test.insert(5);
-        assertEquals(5,test.getRoot().getData());
+        assertEquals(5, test.getRoot().getData());
     }
-    @Test
-    void testTreeWithChildParent() {
-        BinarySearchTree test = new BinarySearchTree();
-        test.insert(25);
-        test.insert(50);
-        test.insert(75);
-        assertEquals(25,test.getRoot().getData());
-        assertEquals(50,test.getRoot().getLeft().getData());
-        assertEquals(75,test.getRoot().getRight().getData());
-    }
+
+//    @Test
+//    void testTreeWithChildParent() {
+//        BinarySearchTree test = new BinarySearchTree();
+//        test.insert(25);
+//        test.insert(50);
+//        test.insert(75);
+//        assertEquals(25, test.getRoot().getData());
+//        assertEquals(50, test.getRoot().getLeft().getData());
+//        assertEquals(75, test.getRoot().getRight().getData());
+//    }
+
     @Test
     void testTreePreOrder() {
         BinarySearchTree test = new BinarySearchTree<>();
@@ -44,9 +49,10 @@ class AppTest {
         test.insert(30);
         test.insert(40);
         test.insert(50);
-        List list = List.of(10,20,30,40,50);
-        assertEquals(list,test.preOrder(test.getRoot()));
+        List list = List.of(10, 20, 30, 40, 50);
+        assertEquals(list, test.preOrder(test.getRoot()));
     }
+
     @Test
     void testTreeInOrder() {
         BinarySearchTree test = new BinarySearchTree<>();
@@ -55,9 +61,10 @@ class AppTest {
         test.insert(60);
         test.insert(40);
         test.insert(20);
-        List list = List.of(10,20,40,50,60);
-        assertEquals(list,test.inOrder(test.getRoot()));
+        List list = List.of(10, 20, 40, 50, 60);
+        assertEquals(list, test.inOrder(test.getRoot()));
     }
+
     @Test
     void testTreePostOrder() {
         BinarySearchTree test = new BinarySearchTree<>();
@@ -66,8 +73,20 @@ class AppTest {
         test.insert(60);
         test.insert(80);
         test.insert(20);
-        List list = List.of(20,80,60,40,100);
-        assertEquals(list,test.postOrder(test.getRoot()));
+        List list = List.of(20, 80, 60, 40, 100);
+        assertEquals(list, test.postOrder(test.getRoot()));
     }
 
+//    @Test
+//    public void max() {
+//        BinarySearchTree test = new BinarySearchTree<>();
+//        test.insert(100);
+//        test.insert(40);
+//        test.insert(60);
+//        test.insert(80);
+//        test.insert(20);
+//        List list = List.of(20, 80, 60, 40, 100);
+//        assertEquals(100, test.treeMax(test.getRoot()));
+//
+//    }
 }

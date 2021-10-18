@@ -1,9 +1,15 @@
 package trees;
 
-import java.util.ArrayList;
-import java.util.List;
+import org.checkerframework.checker.units.qual.C;
 
-public class BinaryTree<T> {
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Stack;
+
+import static java.util.Collections.max;
+
+public class BinaryTree<T extends Comparable<T>> {
     private Node<T> root;
     private List<T> list = new ArrayList<>();
 
@@ -52,38 +58,41 @@ public class BinaryTree<T> {
         return list;
     }
 
-//    public int maxValue(Node<T> node) {
-//        if (node == null)
-//            return 0;
-//
-//        int max = (int) node.getData();
-//        System.out.println("root : " + max);
-//        int left = maxValue(node.getLeft());
-//        System.out.println("left : " + left);
-//        int right = maxValue(node.getRight());
-//        System.out.println("right : " + right);
-//
-//        if (left > max)
-//            max = left;
-//        if (right > max)
-//            max = right;
-//        return max;
-//    }
-
-    public int treeMax(){
-        if (isEmpty()) {
+    //
+    public int treeMax(Node<Integer> root) {
+        if (root == null) {
             return 0;
         }
-        int max = 0;
-        ArrayList<T> maxArray = preOrder();
-        for (int i = 0; i < maxArray.size(); i++) {
-            if(Integer.parseInt(maxArray.get(i) + "") > max){
-                max = Integer.parseInt(maxArray.get(i) + "");
-            }
-        }
-        return  max;
-    }
+        int max = root.getData();
+        int left = treeMax(root.getLeft());
+        int right = treeMax(root.getRight());
 
+        if (left > max) {
+            max = left;
+        } else if (right > max) {
+            max = right;
+        }
+
+        return max;
+    }
+//    int findMax(){
+//        Stack<Node>stack = new Stack<>();
+//        ArrayList<Integer> list = new ArrayList<>();
+//        Node current = root;
+//        //inorderIterative
+//        while(!stack.isEmpty() || current!=null){
+//            if(current!=null){
+//                stack.push(current);
+//                current=current.getLeft();
+//            }
+//            else{
+//                current=stack.pop();
+//                list.add((Integer) current.getData());
+//                current=current.getRight();
+//            }
+//        }
+//        return Collections.max(list);
+//    }
 
 
 }

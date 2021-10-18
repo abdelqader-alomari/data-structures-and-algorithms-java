@@ -9,7 +9,7 @@ public class Node<T> {
         this.data = data;
     }
 
-    public T getData() {
+    public  T getData() {
         return data;
     }
 

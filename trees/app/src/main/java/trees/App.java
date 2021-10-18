@@ -3,6 +3,8 @@
  */
 package trees;
 
+import java.util.LinkedList;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
@@ -10,8 +12,24 @@ public class App {
 
 
     public static void main(String[] args) {
-        
 
+        BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
+        binarySearchTree.insert(30);
+        binarySearchTree.insert(10);
+        binarySearchTree.insert(50);
+        binarySearchTree.insert(15);
+        binarySearchTree.insert(20);
+
+//    System.out.println(binarySearchTree.preOrder(binarySearchTree.getRoot()));
+//        System.out.println(binarySearchTree.inOrder(binarySearchTree.getRoot()));
+//    System.out.println(binarySearchTree.postOrder(binarySearchTree.getRoot()));
+
+        System.out.println(binarySearchTree.contains(30));
+
+
+        // Tree Max
+        System.out.print("Binary Tree Max value is => ");
+        System.out.println( binarySearchTree.treeMax(binarySearchTree.getRoot()));
     }
 
 }

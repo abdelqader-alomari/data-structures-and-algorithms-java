@@ -20,8 +20,8 @@ Code raise/throw a custom, semantic error that describes what went wrong in call
 
 **Binary Tree class method :**
 
-- preOrder() :  root >> left >> right.
-- inOrder():  left >> root >> right.
+- preOrder() : root >> left >> right.
+- inOrder(): left >> root >> right.
 - postOrder(): left >> right >> root
 
 ### Binary Search Tree method (BST) :
@@ -33,3 +33,21 @@ Code raise/throw a custom, semantic error that describes what went wrong in call
 
 - insert(): Time : O(n). Space : O(n).
 - Contains(): Time : O(n). Space : O(n).
+
+---
+
+## tree-max
+
+### Problem Domain
+
+Write a method that and finds the maximum value stored in the tree
+
+### API
+
+treemax() : find the max value in binary tree by compare the max root with max left and max right.
+
+![](Tree-Max.jpg)
+
+### Approach and Efficiency
+
+treemax(): Time: O(1). Space: O(1).
