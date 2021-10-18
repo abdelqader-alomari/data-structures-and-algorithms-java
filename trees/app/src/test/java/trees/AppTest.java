@@ -30,10 +30,10 @@ class AppTest {
     void testTreeWithChildParent() {
         BinarySearchTree test = new BinarySearchTree();
         test.insert(25);
-        test.insert(50);
+        test.insert(5);
         test.insert(75);
         assertEquals(25,test.getRoot().getData());
-        assertEquals(50,test.getRoot().getLeft().getData());
+        assertEquals(5,test.getRoot().getLeft().getData());
         assertEquals(75,test.getRoot().getRight().getData());
     }
     @Test
