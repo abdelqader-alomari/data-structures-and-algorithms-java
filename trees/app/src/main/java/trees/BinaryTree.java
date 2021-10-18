@@ -58,7 +58,6 @@ public class BinaryTree<T extends Comparable<T>> {
         return list;
     }
 
-    //
     public int treeMax(Node<Integer> root) {
         if (root == null) {
             return 0;
@@ -72,27 +71,6 @@ public class BinaryTree<T extends Comparable<T>> {
         } else if (right > max) {
             max = right;
         }
-
         return max;
     }
-//    int findMax(){
-//        Stack<Node>stack = new Stack<>();
-//        ArrayList<Integer> list = new ArrayList<>();
-//        Node current = root;
-//        //inorderIterative
-//        while(!stack.isEmpty() || current!=null){
-//            if(current!=null){
-//                stack.push(current);
-//                current=current.getLeft();
-//            }
-//            else{
-//                current=stack.pop();
-//                list.add((Integer) current.getData());
-//                current=current.getRight();
-//            }
-//        }
-//        return Collections.max(list);
-//    }
-
-
 }

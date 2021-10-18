@@ -77,16 +77,16 @@ class AppTest {
         assertEquals(list, test.postOrder(test.getRoot()));
     }
 
-//    @Test
-//    public void max() {
-//        BinarySearchTree test = new BinarySearchTree<>();
-//        test.insert(100);
-//        test.insert(40);
-//        test.insert(60);
-//        test.insert(80);
-//        test.insert(20);
-//        List list = List.of(20, 80, 60, 40, 100);
-//        assertEquals(100, test.treeMax(test.getRoot()));
-//
-//    }
+    @Test
+    public void max() {
+        BinarySearchTree test = new BinarySearchTree<>();
+        test.insert(100);
+        test.insert(40);
+        test.insert(60);
+        test.insert(80);
+        test.insert(20);
+        List list = List.of(20, 80, 60, 40, 100);
+        assertEquals(100, test.treeMax(test.getRoot()));
+
+    }
 }
