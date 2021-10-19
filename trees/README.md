@@ -63,3 +63,7 @@ Return: list of all values in the tree, in the order they were encountered
 
 breadthFirst(): a method to return all values in the tree in traversal order.
 
+![](TreeBreadthFirst.jpg)
+### Approach and Efficiency
+
+breadthFirst(): Time: O(n). Space: O(n).
