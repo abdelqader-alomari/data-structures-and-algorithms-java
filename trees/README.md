@@ -51,3 +51,15 @@ treemax() : find the max value in binary tree by compare the max root with max l
 ### Approach and Efficiency
 
 treemax(): Time: O(1). Space: O(1).
+
+## Breadth-first Traversal.
+
+### Problem Domain
+
+Write a function called breadth first Arguments: tree
+Return: list of all values in the tree, in the order they were encountered
+
+### API
+
+breadthFirst(): a method to return all values in the tree in traversal order.
+

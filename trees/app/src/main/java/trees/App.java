@@ -10,8 +10,7 @@ public class App {
         return "Hello World!";
     }
 
-
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
         binarySearchTree.insert(30);
@@ -20,16 +19,14 @@ public class App {
         binarySearchTree.insert(15);
         binarySearchTree.insert(20);
 
-//    System.out.println(binarySearchTree.preOrder(binarySearchTree.getRoot()));
-//        System.out.println(binarySearchTree.inOrder(binarySearchTree.getRoot()));
-//    System.out.println(binarySearchTree.postOrder(binarySearchTree.getRoot()));
+//         System.out.println(binarySearchTree.preOrder(binarySearchTree.getRoot()));
+        // System.out.println(binarySearchTree.inOrder(binarySearchTree.getRoot()));
+        // System.out.println(binarySearchTree.postOrder(binarySearchTree.getRoot()));
 
         System.out.println(binarySearchTree.contains(30));
 
-
         // Tree Max
         System.out.print("Binary Tree Max value is => ");
-        System.out.println( binarySearchTree.treeMax(binarySearchTree.getRoot()));
-    }
+        System.out.println(binarySearchTree.treeMax(binarySearchTree.getRoot()));}
 
 }

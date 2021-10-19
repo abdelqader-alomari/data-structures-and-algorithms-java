@@ -1,13 +1,6 @@
 package trees;
 
-import org.checkerframework.checker.units.qual.C;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Stack;
-
-import static java.util.Collections.max;
+import java.util.*;
 
 public class BinaryTree<T extends Comparable<T>> {
     private Node<T> root;
@@ -73,4 +66,21 @@ public class BinaryTree<T extends Comparable<T>> {
         }
         return max;
     }
+    public List<T> breadthFirst(BinarySearchTree<Integer> newTree) {
+        List result = new ArrayList<>();
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(this.root);
+        while(!queue.isEmpty()) {
+            Node newNode = queue.remove();
+            result.add( newNode.getData());
+            if(newNode.getLeft() != null) {
+                queue.add(newNode.getLeft());
+            }
+            if(newNode.getRight() != null){
+                queue.add(newNode.getRight());
+            }
+        }
+        return result;
+    }
+
 }
