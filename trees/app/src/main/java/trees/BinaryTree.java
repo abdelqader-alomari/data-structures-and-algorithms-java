@@ -66,13 +66,13 @@ public class BinaryTree<T extends Comparable<T>> {
         }
         return max;
     }
-    public List<T> breadthFirst(BinarySearchTree<Integer> newTree) {
-        List result = new ArrayList<>();
+    public List<T> breadthFirst(BinarySearchTree<T> newTree) {
+        List<T> result = new ArrayList<>();
         Queue<Node> queue = new LinkedList<>();
-        queue.add(this.root);
+        queue.add(getRoot());
         while(!queue.isEmpty()) {
             Node newNode = queue.remove();
-            result.add( newNode.getData());
+            result.add((T) newNode.getData());
             if(newNode.getLeft() != null) {
                 queue.add(newNode.getLeft());
             }

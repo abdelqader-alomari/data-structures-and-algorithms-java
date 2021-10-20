@@ -89,4 +89,18 @@ class AppTest {
         assertEquals(100, test.treeMax(test.getRoot()));
 
     }
+
+    @Test
+    public void breadthFirst(){
+        BinarySearchTree<Integer> test = new BinarySearchTree<>();
+        test.insert(25);
+        test.insert(35);
+        test.insert(15);
+        test.insert(5);
+        test.insert(10);
+        test.insert(30);
+
+        List list = List.of(25, 15, 35, 5, 30, 10);
+        assertEquals(list,test.breadthFirst(test));
+    }
 }

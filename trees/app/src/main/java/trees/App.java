@@ -12,21 +12,34 @@ public class App {
 
     public static void main(String[] args) throws Exception {
 
+//        BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
+//        binarySearchTree.insert(30);
+//        binarySearchTree.insert(10);
+//        binarySearchTree.insert(50);
+//        binarySearchTree.insert(15);
+//        binarySearchTree.insert(20);
+//
+////         System.out.println(binarySearchTree.preOrder(binarySearchTree.getRoot()));
+//        // System.out.println(binarySearchTree.inOrder(binarySearchTree.getRoot()));
+//        // System.out.println(binarySearchTree.postOrder(binarySearchTree.getRoot()));
+//
+//        System.out.println(binarySearchTree.contains(30));
+//
+//        // Tree Max
+//        System.out.print("Binary Tree Max value is => ");
+//        System.out.println(binarySearchTree.treeMax(binarySearchTree.getRoot()));
+
         BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
-        binarySearchTree.insert(30);
-        binarySearchTree.insert(10);
-        binarySearchTree.insert(50);
+        binarySearchTree.insert(25);
+        binarySearchTree.insert(35);
         binarySearchTree.insert(15);
-        binarySearchTree.insert(20);
+        binarySearchTree.insert(5);
+        binarySearchTree.insert(10);
+        binarySearchTree.insert(30);
 
-//         System.out.println(binarySearchTree.preOrder(binarySearchTree.getRoot()));
-        // System.out.println(binarySearchTree.inOrder(binarySearchTree.getRoot()));
-        // System.out.println(binarySearchTree.postOrder(binarySearchTree.getRoot()));
+        System.out.print("Breadth First Traversal => ");
+        System.out.println(binarySearchTree.breadthFirst(binarySearchTree));
 
-        System.out.println(binarySearchTree.contains(30));
-
-        // Tree Max
-        System.out.print("Binary Tree Max value is => ");
-        System.out.println(binarySearchTree.treeMax(binarySearchTree.getRoot()));}
+    }
 
 }
