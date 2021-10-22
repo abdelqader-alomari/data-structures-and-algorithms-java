@@ -4,12 +4,13 @@ public class Node<T> {
     private T data;
     private Node<T> left;
     private Node<T> Right;
+    public int key;
 
     public Node(T data) {
         this.data = data;
     }
 
-    public  T getData() {
+    public T getData() {
         return data;
     }
 
@@ -35,10 +36,6 @@ public class Node<T> {
 
     @Override
     public String toString() {
-        return "Node{" +
-                "data=" + data +
-                ", left=" + left +
-                ", Right=" + Right +
-                '}';
+        return "Node{" + "data=" + data + ", left=" + left + ", Right=" + Right + '}';
     }
 }

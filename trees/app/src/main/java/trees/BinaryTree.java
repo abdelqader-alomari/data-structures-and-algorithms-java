@@ -66,21 +66,56 @@ public class BinaryTree<T extends Comparable<T>> {
         }
         return max;
     }
+
     public List<T> breadthFirst(BinarySearchTree<T> newTree) {
         List<T> result = new ArrayList<>();
         Queue<Node> queue = new LinkedList<>();
         queue.add(getRoot());
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
             Node newNode = queue.remove();
             result.add((T) newNode.getData());
-            if(newNode.getLeft() != null) {
+            if (newNode.getLeft() != null) {
                 queue.add(newNode.getLeft());
             }
-            if(newNode.getRight() != null){
+            if (newNode.getRight() != null) {
                 queue.add(newNode.getRight());
             }
         }
         return result;
     }
 
+    public int oddSum(BinarySearchTree<T> newTree) {
+        int sum = 0;
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(getRoot());
+        if ((int) getRoot().getData() % 2 != 0) {
+            sum = sum + (int) getRoot().getData();
+        }
+
+        while (!queue.isEmpty()) {
+            Node newNode = queue.remove();
+            if (newNode.getLeft() != null && (int) newNode.getLeft().getData() % 2 != 0) {
+                queue.add(newNode.getLeft());
+                sum += (int) newNode.getLeft().getData();
+            }
+            if (newNode.getRight() != null && (int) newNode.getRight().getData() % 2 != 0) {
+                queue.add(newNode.getRight());
+                sum += (int) newNode.getRight().getData();
+            }
+        }
+        return sum;
+    }
+
+    // public int oddSum() {
+    // List<T> list = new ArrayList<>();
+    // int sum = 0;
+    // BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
+    // list = (List<T>) binarySearchTree;
+    // for (int i = 0; i < list.size(); i++) {
+    // if ((int) list.get(i) % 2 != 0) {
+    // sum += (int) list.get(i);
+    // }
+    // }
+    // return sum;
+    // }
 }

@@ -5,6 +5,8 @@ package trees;
 
 import org.junit.jupiter.api.Test;
 
+import trees.karytree.KaryTree;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -30,16 +32,16 @@ class AppTest {
         assertEquals(5, test.getRoot().getData());
     }
 
-//    @Test
-//    void testTreeWithChildParent() {
-//        BinarySearchTree test = new BinarySearchTree();
-//        test.insert(25);
-//        test.insert(50);
-//        test.insert(75);
-//        assertEquals(25, test.getRoot().getData());
-//        assertEquals(50, test.getRoot().getLeft().getData());
-//        assertEquals(75, test.getRoot().getRight().getData());
-//    }
+    // @Test
+    // void testTreeWithChildParent() {
+    // BinarySearchTree test = new BinarySearchTree();
+    // test.insert(25);
+    // test.insert(50);
+    // test.insert(75);
+    // assertEquals(25, test.getRoot().getData());
+    // assertEquals(50, test.getRoot().getLeft().getData());
+    // assertEquals(75, test.getRoot().getRight().getData());
+    // }
 
     @Test
     void testTreePreOrder() {
@@ -91,7 +93,7 @@ class AppTest {
     }
 
     @Test
-    public void breadthFirst(){
+    public void breadthFirst() {
         BinarySearchTree<Integer> test = new BinarySearchTree<>();
         test.insert(25);
         test.insert(35);
@@ -101,6 +103,45 @@ class AppTest {
         test.insert(30);
 
         List list = List.of(25, 15, 35, 5, 30, 10);
-        assertEquals(list,test.breadthFirst(test));
+        assertEquals(list, test.breadthFirst(test));
+    }
+
+    // ********************* FizzBuzzTests *********************//
+
+    @Test
+    public void stringTest() {
+        KaryTree test = new KaryTree(2);
+        test.insert(1);
+        test.insert(2);
+        assertEquals("[ 1   2   ]", test.fizzBuzzTree(test).toString());
+    }
+
+    @Test
+    public void fizzTest() {
+        KaryTree test = new KaryTree(2);
+        test.insert(7);
+        test.insert(8);
+        test.insert(9);
+        assertEquals("[ 7   8    Fizz   ]", test.fizzBuzzTree(test).toString());
+    }
+
+    @Test
+    public void buzzTest() {
+        KaryTree test = new KaryTree(2);
+        test.insert(5);
+        test.insert(7);
+        test.insert(8);
+        assertEquals("[ Buzz   7    8   ]", test.fizzBuzzTree(test).toString());
+    }
+
+    @Test
+    public void fizzBuzzTest() {
+        KaryTree test = new KaryTree(2);
+        test.insert(1);
+        test.insert(2);
+        test.insert(3);
+        test.insert(5);
+        test.insert(15);
+        assertEquals("[ 1   2   Buzz    FizzBuzz     Fizz   ]", test.fizzBuzzTree(test).toString());
     }
 }

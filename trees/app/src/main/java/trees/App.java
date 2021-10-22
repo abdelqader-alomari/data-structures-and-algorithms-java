@@ -5,6 +5,8 @@ package trees;
 
 import java.util.LinkedList;
 
+import trees.karytree.KaryTree;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
@@ -12,22 +14,23 @@ public class App {
 
     public static void main(String[] args) throws Exception {
 
-//        BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
-//        binarySearchTree.insert(30);
-//        binarySearchTree.insert(10);
-//        binarySearchTree.insert(50);
-//        binarySearchTree.insert(15);
-//        binarySearchTree.insert(20);
-//
-////         System.out.println(binarySearchTree.preOrder(binarySearchTree.getRoot()));
-//        // System.out.println(binarySearchTree.inOrder(binarySearchTree.getRoot()));
-//        // System.out.println(binarySearchTree.postOrder(binarySearchTree.getRoot()));
-//
-//        System.out.println(binarySearchTree.contains(30));
-//
-//        // Tree Max
-//        System.out.print("Binary Tree Max value is => ");
-//        System.out.println(binarySearchTree.treeMax(binarySearchTree.getRoot()));
+        // BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
+        // binarySearchTree.insert(30);
+        // binarySearchTree.insert(10);
+        // binarySearchTree.insert(50);
+        // binarySearchTree.insert(15);
+        // binarySearchTree.insert(20);
+        //
+        //// System.out.println(binarySearchTree.preOrder(binarySearchTree.getRoot()));
+        // // System.out.println(binarySearchTree.inOrder(binarySearchTree.getRoot()));
+        // //
+        // System.out.println(binarySearchTree.postOrder(binarySearchTree.getRoot()));
+        //
+        // System.out.println(binarySearchTree.contains(30));
+        //
+        // // Tree Max
+        // System.out.print("Binary Tree Max value is => ");
+        // System.out.println(binarySearchTree.treeMax(binarySearchTree.getRoot()));
 
         BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
         binarySearchTree.insert(25);
@@ -39,6 +42,25 @@ public class App {
 
         System.out.print("Breadth First Traversal => ");
         System.out.println(binarySearchTree.breadthFirst(binarySearchTree));
+        System.out.print("BST Odd Sum => ");
+        // System.out.println(binarySearchTree.oddSum());
+        System.out.println(binarySearchTree.oddSum(binarySearchTree));
+
+        KaryTree<Integer> KaryTree = new KaryTree<>(3);
+        KaryTree.insert(15);
+        KaryTree.insert(1);
+        KaryTree.insert(12);
+        KaryTree.insert(5);
+        KaryTree.insert(60);
+        KaryTree.insert(9);
+        KaryTree.insert(20);
+        KaryTree.insert(2);
+        KaryTree.insert(30);
+        KaryTree.insert(6);
+        System.out.print("The Tree before looping => ");
+        System.out.println(KaryTree);
+        System.out.print("The Tree after looping => ");
+        System.out.println(KaryTree.fizzBuzzTree(KaryTree));
 
     }
 
