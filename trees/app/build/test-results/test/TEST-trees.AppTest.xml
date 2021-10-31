@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="trees.AppTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2021-10-20T00:12:30" hostname="LTUCSTUDENT-L106" time="0.039">
+  <properties/>
+  <testcase name="testTreePreOrder()" classname="trees.AppTest" time="0.022"/>
+  <testcase name="testEmptyTree()" classname="trees.AppTest" time="0.002"/>
+  <testcase name="testTreePostOrder()" classname="trees.AppTest" time="0.002"/>
+  <testcase name="max()" classname="trees.AppTest" time="0.001"/>
+  <testcase name="breadthFirst()" classname="trees.AppTest" time="0.001"/>
+  <testcase name="appHasAGreeting()" classname="trees.AppTest" time="0.002"/>
+  <testcase name="testTreeWithSingleRoot()" classname="trees.AppTest" time="0.001"/>
+  <testcase name="testTreeInOrder()" classname="trees.AppTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
