@@ -8,5 +8,5 @@ Sorting an array by the quick sort algorithm.
 
 ## Approach & Efficiency
 
-- Space: O(n)
-- Time: O(n^2)
+- Space: O(1)
+- Time: O(log(n))
