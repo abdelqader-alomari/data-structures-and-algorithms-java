@@ -1,7 +1,9 @@
 package hashtable;
 
 import java.util.ArrayList;
+import java.util.Locale;
 import java.util.Objects;
+
 
 public class HashTable<K,V> {
     // bucket of hashnodes used to store linked list of
@@ -115,6 +117,7 @@ public class HashTable<K,V> {
                     headNode = headNode.next;
                 }
             }
+            
         }
     }
 
@@ -192,11 +195,25 @@ public class HashTable<K,V> {
             if (head.key.equals(key) && head.hashCode == hashCode) {
                 return true;
             }
-
             head = head.next;
         }
         // key not found
         return false;
+    }
+    public String repeatedWord(String strings) {
+        String[] words = strings.toLowerCase().split(" ");
+        HashTable<String, Integer> hashMap = new HashTable<String, Integer>();
+        for (String word : words) {
+            if (word.contains(",") || word.contains(".") || word.contains("?") || word.contains(";") || word.contains(":")) {
+                word = word.substring(0, word.length() - 1);
+            }
+                int count = hashMap.get(word) != null ? hashMap.get(word) : 0;
+                if (count == 1) {
+                    return word;
+                }
+                hashMap.add(word, count + 1);
+        }
+        return "There is no repeated words!";
     }
 
 }

@@ -10,25 +10,36 @@ public class App {
 
     public static void main(String[] args) {
 
-        System.out.println(new App().getGreeting());
+//        System.out.println(new App().getGreeting());
+//
+//        HashTable<String, Integer> studentAllowances = new HashTable<>();
+//        studentAllowances.add("Sally", 400);
+//        studentAllowances.add("Doa", 600);
+//        studentAllowances.add("Farah", 700);
+//        studentAllowances.add("Jason", 90000);
+//        studentAllowances.add("Morgan", 800);
+//        studentAllowances.add("Ammar",60000);
+//        studentAllowances.add("Naim", 1000);
+//        studentAllowances.add("Abdelqader",50000);
+//        studentAllowances.add("Qusai", 1500);
+//        studentAllowances.add("Deyaa", 10000);
+//
+//        System.out.println("The size is => " + studentAllowances.getSize());
+//        System.out.println("The Sally allowance is => " + studentAllowances.get("Sally"));
+//        System.out.println("Delete Sally => " + studentAllowances.remove("Sally"));
+//        System.out.println("Is it contains Ammar? => " + studentAllowances.contains("Ammar"));
+//        System.out.println("Is it contains Tom? => " + studentAllowances.contains("Tom"));
 
-        HashTable<String, Integer> studentAllowances = new HashTable<>();
-        studentAllowances.add("Sally", 400);
-        studentAllowances.add("Doa", 600);
-        studentAllowances.add("Farah", 700);
-        studentAllowances.add("Jason", 90000);
-        studentAllowances.add("Morgan", 800);
-        studentAllowances.add("Ammar",60000);
-        studentAllowances.add("Naim", 1000);
-        studentAllowances.add("Abdelqader",50000);
-        studentAllowances.add("Qusai", 1500);
-        studentAllowances.add("Deyaa", 10000);
 
-        System.out.println("The size is => " + studentAllowances.getSize());
-        System.out.println("The Sally allowance is => " + studentAllowances.get("Sally"));
-        System.out.println("Delete Sally => " + studentAllowances.remove("Sally"));
-        System.out.println("Is it contains Ammar? => " + studentAllowances.contains("Ammar"));
-        System.out.println("Is it contains Tom? => " + studentAllowances.contains("Tom"));
+        HashTable<String, Integer> wordFinder = new HashTable<String, Integer>();
+
+        String paragraph = "It. was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way – in short, the period was so far like the present period, that some of its noisiest authorities insisted on its being received, for good or for evil, in the superlative degree of comparison only";
+        String paragraph2 = "Once upon a time, there was a brave princess who...";
+        String paragraph3 = "I love programming; Programming is my passion";
+
+        System.out.println("Repeated word is => " + wordFinder.repeatedWord(paragraph));
+        System.out.println("Repeated word is => " + wordFinder.repeatedWord(paragraph2));
+        System.out.println("Repeated word is => " + wordFinder.repeatedWord(paragraph3));
 
     }
 }

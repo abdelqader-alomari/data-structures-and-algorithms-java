@@ -39,3 +39,23 @@ get the size of all nodes in the array
 
 ### isEmpty:
 to check where the array is empty or not
+
+---
+
+# Code Challenge 31 - hashmap-repeated-word
+
+## Challenge
+
+Write a function called repeated word that finds the first word to occur more than once in a string.
+
+## Approach & Efficiency
+
+### Space Complexity
+O(n)
+
+### Time Complexity
+O(n)
+
+## WhiteBoard
+
+![WhiteBoard](hashmap-repeated-word.jpg)
