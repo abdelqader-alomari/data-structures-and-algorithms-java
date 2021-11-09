@@ -59,3 +59,25 @@ O(n)
 ## WhiteBoard
 
 ![WhiteBoard](hashmap-repeated-word.jpg)
+
+# Code Challenge 32 - tree-intersection
+
+## Challenge
+
+Write a function called "treeIntersection" that takes two binary trees as an arguments, And return a set of values found in both trees.
+
+
+### Space Complexity
+O(n)
+
+### Time Complexity
+O(n)
+## Approach & Efficiency
+
+## WhiteBoard
+
+![tree-intersection](tree-intersection.jpg)
+
+
+
+

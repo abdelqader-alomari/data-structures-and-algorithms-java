@@ -1,8 +1,6 @@
 package hashtable;
 
-import java.util.ArrayList;
-import java.util.Locale;
-import java.util.Objects;
+import java.util.*;
 
 
 public class HashTable<K,V> {
@@ -215,5 +213,44 @@ public class HashTable<K,V> {
         }
         return "There is no repeated words!";
     }
+    public HashMap<Integer,Integer> hashMap = new HashMap<>();
+    public List<Integer> list = new ArrayList<>(); // List for intersections
+
+    public List<Integer> treeIntersection(BinaryTree tree1, BinaryTree tree2){
+
+        if (tree1.root == null || tree2.root  == null) {
+            return null;
+        }
+        traverse(tree2.root);
+        compare(tree1.root);
+        return list;
+    }
+
+    public void traverse(BinaryTreeNode node) {
+
+        if (node != null) {
+
+            int count = 0 ;
+            if(hashMap.get(node.getData()) == null){
+                count = 1;
+            }else{
+                count+= 1;
+            }
+            hashMap.put(node.getData(), count);
+            traverse(node.getLeft());
+            traverse(node.getRight());
+        }
+    }
+    public void compare(BinaryTreeNode node){
+        if (node != null) {
+            if (hashMap.get(node.getData()) != null){
+                list.add(node.getData());
+            }
+            compare(node.getLeft());
+            compare(node.getRight());
+        }
+
+    }
+
 
 }

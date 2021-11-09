@@ -90,5 +90,68 @@ class AppTest {
         String paragraph = "";
         assertEquals("There is no repeated words", test.repeatedWord(paragraph));
     }
+    @Test
+    public void intersectionTree(){
+        HashTable<Integer,Integer> trees = new HashTable<>();
+        BinaryTree tree1 = new BinaryTree();
+        BinaryTree tree2 = new BinaryTree();
 
+        tree1.root = new BinaryTreeNode(10);
+        tree1.root.setLeft(new BinaryTreeNode(30));
+        tree1.root.setRight(new BinaryTreeNode(50));
+        tree1.root.getRight().setLeft(new BinaryTreeNode(100));
+        tree1.root.getRight().setRight(new BinaryTreeNode(150));
+
+        tree2.root= new BinaryTreeNode(50);
+        tree2.root.setLeft(new BinaryTreeNode(100));
+        tree2.root.setRight(new BinaryTreeNode(150));
+        tree2.root.getRight().setLeft(new BinaryTreeNode(200));
+        tree2.root.getRight().setRight(new BinaryTreeNode(250));
+
+        assertEquals("[50, 100, 150]", trees.treeIntersection(tree1,tree2).toString());
+
+    }
+
+    @Test
+    public void intersectionTreeNoCommon(){
+        HashTable<Integer,Integer> trees = new HashTable<>();
+        BinaryTree tree1 = new BinaryTree();
+        BinaryTree tree2 = new BinaryTree();
+
+        tree1.root= new BinaryTreeNode(10);
+        tree1.root.setLeft(new BinaryTreeNode(20));
+        tree1.root.setRight(new BinaryTreeNode(30));
+        tree1.root.getRight().setLeft(new BinaryTreeNode(50));
+        tree1.root.getRight().setRight(new BinaryTreeNode(100));
+
+        tree2.root = new BinaryTreeNode(25);
+        tree2.root.setLeft(new BinaryTreeNode(75));
+        tree2.root.setRight(new BinaryTreeNode(150));
+        tree2.root.getRight().setLeft(new BinaryTreeNode(250));
+        tree2.root.getRight().setRight(new BinaryTreeNode(375));
+
+        assertEquals("[]", trees.treeIntersection(tree1,tree2).toString());
+
+    }
+
+    @Test
+    public void intersectionTreeDifferentNumOfNodes(){
+        HashTable<Integer,Integer> trees = new HashTable<>();
+        BinaryTree tree1 = new BinaryTree();
+        BinaryTree tree2 = new BinaryTree();
+
+        tree1.root = new BinaryTreeNode(25);
+        tree1.root.setLeft(new BinaryTreeNode(50));
+        tree1.root.setRight(new BinaryTreeNode(75));
+        tree1.root.getRight().setLeft(new BinaryTreeNode(100));
+        tree1.root.getRight().setRight(new BinaryTreeNode(125));
+        tree1.root.getRight().setRight(new BinaryTreeNode(150));
+
+        tree2.root= new BinaryTreeNode(75);
+        tree2.root.setLeft(new BinaryTreeNode(100));
+        tree2.root.setRight(new BinaryTreeNode(140));
+        tree2.root.getRight().setLeft(new BinaryTreeNode(200));
+
+        assertEquals("[75, 100]", trees.treeIntersection(tree1,tree2).toString());
+    }
 }
