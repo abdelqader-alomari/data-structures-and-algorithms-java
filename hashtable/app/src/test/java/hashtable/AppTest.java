@@ -5,6 +5,7 @@ package hashtable;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.HashMap;
 import java.util.Objects;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -58,100 +59,102 @@ class AppTest {
 //        assertEquals(70, hashTable.get("Python"));
 
     }
+//    @Test
+//    public void repeatedWord(){
+//
+//        HashTable<String, Integer> test = new HashTable<String, Integer>();
+//
+//        String paragraph1 = "Once upon a time, there was a brave princess who...";
+//        assertEquals("a", test.repeatedWord(paragraph1));
+//
+//        String paragraph2 = "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way – in short, the period was so far like the present period, that some of its noisiest authorities insisted on its being received, for good or for evil, in the superlative degree of comparison only";
+//        assertEquals("it", test.repeatedWord(paragraph2));
+//
+//        String paragraph3= "It was a queer,  sultry summer, the summer they electrocuted the Rosenbergs, and I didn’t know what I was doing in New York";
+//        assertEquals("summer", test.repeatedWord(paragraph3));
+//
+//    }
+//    @Test
+//    public void repeatedWordNoRepeat(){
+//
+//        HashTable<String, Integer> test = new HashTable<String, Integer>();
+//
+//        String paragraph = "Once upon a time";
+//        assertEquals("There is no repeated words", test.repeatedWord(paragraph));
+//    }
+//
+//    @Test
+//    public void repeatedWordEmpty(){
+//
+//        HashTable<String, Integer> test = new HashTable<String, Integer>();
+//
+//        String paragraph = "";
+//        assertEquals("There is no repeated words", test.repeatedWord(paragraph));
+//    }
     @Test
-    public void repeatedWord(){
+    public void testLeftJoinWithAllJoins(){
 
-        HashTable<String, Integer> test = new HashTable<String, Integer>();
+        HashMap h1 = new HashMap();
 
-        String paragraph1 = "Once upon a time, there was a brave princess who...";
-        assertEquals("a", test.repeatedWord(paragraph1));
+        h1.put("fond", "enamored");
+        h1.put("wrath", "anger");
+        h1.put("flow", "jam");
 
-        String paragraph2 = "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way – in short, the period was so far like the present period, that some of its noisiest authorities insisted on its being received, for good or for evil, in the superlative degree of comparison only";
-        assertEquals("it", test.repeatedWord(paragraph2));
+        HashMap h2 = new HashMap();
 
-        String paragraph3= "It was a queer,  sultry summer, the summer they electrocuted the Rosenbergs, and I didn’t know what I was doing in New York";
-        assertEquals("summer", test.repeatedWord(paragraph3));
+        h2.put("fond", "averse");
+        h2.put("wrath", "delight");
+        h2.put("flow", "test");
 
-    }
-    @Test
-    public void repeatedWordNoRepeat(){
-
-        HashTable<String, Integer> test = new HashTable<String, Integer>();
-
-        String paragraph = "Once upon a time";
-        assertEquals("There is no repeated words", test.repeatedWord(paragraph));
-    }
-
-    @Test
-    public void repeatedWordEmpty(){
-
-        HashTable<String, Integer> test = new HashTable<String, Integer>();
-
-        String paragraph = "";
-        assertEquals("There is no repeated words", test.repeatedWord(paragraph));
-    }
-    @Test
-    public void intersectionTree(){
-        HashTable<Integer,Integer> trees = new HashTable<>();
-        BinaryTree tree1 = new BinaryTree();
-        BinaryTree tree2 = new BinaryTree();
-
-        tree1.root = new BinaryTreeNode(10);
-        tree1.root.setLeft(new BinaryTreeNode(30));
-        tree1.root.setRight(new BinaryTreeNode(50));
-        tree1.root.getRight().setLeft(new BinaryTreeNode(100));
-        tree1.root.getRight().setRight(new BinaryTreeNode(150));
-
-        tree2.root= new BinaryTreeNode(50);
-        tree2.root.setLeft(new BinaryTreeNode(100));
-        tree2.root.setRight(new BinaryTreeNode(150));
-        tree2.root.getRight().setLeft(new BinaryTreeNode(200));
-        tree2.root.getRight().setRight(new BinaryTreeNode(250));
-
-        assertEquals("[50, 100, 150]", trees.treeIntersection(tree1,tree2).toString());
-
+        assertEquals("[[ wrath, anger, delight ], [ flow, jam, test ], [ fond, enamored, averse ]]", HashTable.leftJoin(h1, h2).toString());
     }
 
     @Test
-    public void intersectionTreeNoCommon(){
-        HashTable<Integer,Integer> trees = new HashTable<>();
-        BinaryTree tree1 = new BinaryTree();
-        BinaryTree tree2 = new BinaryTree();
+    public void testLeftJoinWithSomeJoins(){
 
-        tree1.root= new BinaryTreeNode(10);
-        tree1.root.setLeft(new BinaryTreeNode(20));
-        tree1.root.setRight(new BinaryTreeNode(30));
-        tree1.root.getRight().setLeft(new BinaryTreeNode(50));
-        tree1.root.getRight().setRight(new BinaryTreeNode(100));
+        HashMap h1 = new HashMap();
 
-        tree2.root = new BinaryTreeNode(25);
-        tree2.root.setLeft(new BinaryTreeNode(75));
-        tree2.root.setRight(new BinaryTreeNode(150));
-        tree2.root.getRight().setLeft(new BinaryTreeNode(250));
-        tree2.root.getRight().setRight(new BinaryTreeNode(375));
+        h1.put("fond", "enamored");
+        h1.put("wrath", "anger");
+        h1.put("diligent", "employed");
+        h1.put("outfit", "garb");
+        h1.put("guide", "usher");
 
-        assertEquals("[]", trees.treeIntersection(tree1,tree2).toString());
+        HashMap h2 = new HashMap();
+
+        h2.put("fond", "averse");
+        h2.put("wrath", "delight");
+        h2.put("flow", "jam");
+
+
+        assertEquals("[[ diligent, employed, null ], [ outfit, garb, null ], [ wrath, anger, delight ], [ guide, usher, null ], [ fond, enamored, averse ]]", HashTable.leftJoin(h1, h2).toString());
+    }
+
+    @Test
+    public void testLeftJoinWithEmptySecondHashMap(){
+
+        HashMap h1 = new HashMap();
+
+        h1.put("fond", "enamored");
+        h1.put("wrath", "anger");
+        h1.put("diligent", "employed");
+        h1.put("outfit", "garb");
+        h1.put("guide", "usher");
+
+        HashMap h2 = new HashMap();
+
+        assertEquals("[[ diligent, employed, null ], [ outfit, garb, null ], [ wrath, anger, null ], [ guide, usher, null ], [ fond, enamored, null ]]", HashTable.leftJoin(h1, h2).toString());
 
     }
 
     @Test
-    public void intersectionTreeDifferentNumOfNodes(){
-        HashTable<Integer,Integer> trees = new HashTable<>();
-        BinaryTree tree1 = new BinaryTree();
-        BinaryTree tree2 = new BinaryTree();
+    public void testLeftJoinBothEmptyHashMap(){
 
-        tree1.root = new BinaryTreeNode(25);
-        tree1.root.setLeft(new BinaryTreeNode(50));
-        tree1.root.setRight(new BinaryTreeNode(75));
-        tree1.root.getRight().setLeft(new BinaryTreeNode(100));
-        tree1.root.getRight().setRight(new BinaryTreeNode(125));
-        tree1.root.getRight().setRight(new BinaryTreeNode(150));
+        HashMap h1 = new HashMap();
 
-        tree2.root= new BinaryTreeNode(75);
-        tree2.root.setLeft(new BinaryTreeNode(100));
-        tree2.root.setRight(new BinaryTreeNode(140));
-        tree2.root.getRight().setLeft(new BinaryTreeNode(200));
+        HashMap h2 = new HashMap();
 
-        assertEquals("[75, 100]", trees.treeIntersection(tree1,tree2).toString());
+        assertNull(HashTable.leftJoin(h1, h2));
     }
+
 }

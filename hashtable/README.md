@@ -78,6 +78,21 @@ O(n)
 
 ![tree-intersection](tree-intersection.jpg)
 
+# Code Challenge 33 - hashmap-left-join
 
+## Challenge
+
+Write a function called leftJoin that takes 2 hashmaps as an arguments. And return it as left join into single data structure
+
+### Space Complexity
+O(n)
+
+### Time Complexity
+O(n)
+## Approach & Efficiency
+
+## WhiteBoard
+
+![tree-intersection](hashmap-left-join.jpg)
 
 

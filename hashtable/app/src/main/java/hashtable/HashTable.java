@@ -213,43 +213,18 @@ public class HashTable<K,V> {
         }
         return "There is no repeated words!";
     }
-    public HashMap<Integer,Integer> hashMap = new HashMap<>();
-    public List<Integer> list = new ArrayList<>(); // List for intersections
 
-    public List<Integer> treeIntersection(BinaryTree tree1, BinaryTree tree2){
+    public static List<String> leftJoin(HashMap<String, String> h1, HashMap<String, String> h2) {
 
-        if (tree1.root == null || tree2.root  == null) {
+        if (h1.keySet().isEmpty()) {
             return null;
         }
-        traverse(tree2.root);
-        compare(tree1.root);
+        List<String> list = new ArrayList<>();
+        for (String k : h1.keySet()) {
+
+            list.add("[ " + k + ", " + h1.get(k) + ", " + h2.get(k) + " ]");
+        }
         return list;
-    }
-
-    public void traverse(BinaryTreeNode node) {
-
-        if (node != null) {
-
-            int count = 0 ;
-            if(hashMap.get(node.getData()) == null){
-                count = 1;
-            }else{
-                count+= 1;
-            }
-            hashMap.put(node.getData(), count);
-            traverse(node.getLeft());
-            traverse(node.getRight());
-        }
-    }
-    public void compare(BinaryTreeNode node){
-        if (node != null) {
-            if (hashMap.get(node.getData()) != null){
-                list.add(node.getData());
-            }
-            compare(node.getLeft());
-            compare(node.getRight());
-        }
-
     }
 
 
