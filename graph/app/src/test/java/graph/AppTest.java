@@ -11,4 +11,72 @@ class AppTest {
         App classUnderTest = new App();
         assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
     }
+    @Test
+    public void addNode(){
+
+        Graph graph = new Graph();
+
+        graph.addNode("Fellow 1");
+        graph.addNode("Fellow 2");
+        graph.addNode("Fellow 3");
+        graph.addNode("Fellow 4");
+
+        assertNotNull(graph.getNodes());
+        assertEquals(4, graph.size());
+    }
+
+    @Test
+    public void addEdge(){
+
+        Graph graph = new Graph();
+
+        graph.addNode("Fellow 1");
+        graph.addNode("Fellow 2");
+
+        graph.addEdge("Fellow 1", "Fellow 2");
+
+        assertEquals("Fellow 1 is connected to [Fellow 2]", graph.print());
+    }
+
+    @Test
+    public void NodeNeighbors(){
+
+        Graph graph = new Graph();
+
+        graph.addNode("Fellow 1");
+        graph.addNode("Fellow 2");
+        graph.addNode("Fellow 3");
+
+        graph.addEdge("Fellow 1", "Fellow 2");
+        graph.addEdge("Fellow 2", "Fellow 1");
+        graph.addEdge("Fellow 3", "Fellow 2");
+
+        assertEquals("[Fellow 2]", graph.getNeighbors("Fellow 1").toString());
+        assertEquals("[Fellow 1]", graph.getNeighbors("Fellow 2").toString());
+
+    }
+
+    @Test
+    public void oneNodeAndOneEdge(){
+
+        Graph graph = new Graph();
+
+        graph.addNode("Fellow 1");
+
+        graph.addEdge("Fellow 1","Fellow 1");
+
+        assertEquals("Fellow 1 is connected to [Fellow 1]", graph.print());
+    }
+
+    @Test
+    public void emptyGraph(){
+
+        Graph graph = new Graph();
+
+        assertEquals(0, graph.size());
+
+        assertEquals("[]", graph.getNodes().toString());
+    }
+
+
 }
