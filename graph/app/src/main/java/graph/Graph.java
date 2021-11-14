@@ -9,15 +9,18 @@ public class Graph {
         public Node(String label) {
             this.label = label;
         }
+
         @Override
         public boolean equals(Object object) {
             Node node = (Node) object;
             return Objects.equals(label, node.label);
         }
+
         @Override
         public int hashCode() {
             return Objects.hash(label);
         }
+
         @Override
         public String toString() {
             return label;
@@ -42,7 +45,8 @@ public class Graph {
         if (toNode == null)
             throw new IllegalArgumentException("It's empty and this is not a valid node");
         adjacencyList.get(fromNode).add(toNode);
-//        adjacencyList.get(toNode).add(fromNode); // if we comment this will get uni direct graph, otherwise it will become Indirect (with inverse relationship)
+        // adjacencyList.get(toNode).add(fromNode); // if we comment this will get uni
+        // direct graph, otherwise it will become Indirect (with inverse relationship)
     }
 
     public Set<Node> getNodes() {
@@ -59,13 +63,38 @@ public class Graph {
     }
 
     public String print() {
-            var print = "";
+        var print = "";
         for (Node source : adjacencyList.keySet()) {
             var targets = adjacencyList.get(source);
             if (!targets.isEmpty()) {
                 print += source + " is connected to " + targets;
             }
         }
-            return print;
+        return print;
     }
-}
+
+    public void traverseBreadthFirst(String root){
+        Node node = nodes.get(root);
+        if(node == null){
+            return;
+        }
+        Set<Node> visited = new HashSet<Node>();
+
+        Queue<Node> queue = new ArrayDeque<>();
+        queue.add(node);
+
+        while (!queue.isEmpty()){
+            Node current = queue.remove();
+
+            if(visited.contains(current)){
+                continue;
+            }
+            System.out.println(current);
+            visited.add(current);
+
+            for(var neighbor : adjacencyList.get(current)){
+                if(!visited.contains(neighbor))
+                    queue.add(neighbor);
+            } )
+        }
+    }
