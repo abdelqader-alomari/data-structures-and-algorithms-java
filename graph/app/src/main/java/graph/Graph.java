@@ -73,28 +73,24 @@ public class Graph {
         return print;
     }
 
-    public void traverseBreadthFirst(String root){
+    public Set<String> breadthFirst_traversal(String root) {
         Node node = nodes.get(root);
         if(node == null){
-            return;
+            return null;
         }
-        Set<Node> visited = new HashSet<Node>();
-
-        Queue<Node> queue = new ArrayDeque<>();
-        queue.add(node);
-
-        while (!queue.isEmpty()){
-            Node current = queue.remove();
-
-            if(visited.contains(current)){
-                continue;
+        Set<String> visited = new LinkedHashSet<>();
+        Queue<String> queue = new LinkedList<>();
+        queue.add(root);
+        visited.add(root);
+        while (!queue.isEmpty()) {
+            String vertex = queue.poll();
+            for (Node n : getNeighbors(vertex)) {
+                if (!visited.contains(n.label)) {
+                    visited.add(n.label);
+                    queue.add(n.label);
+                }
             }
-            System.out.println(current);
-            visited.add(current);
-
-            for(var neighbor : adjacencyList.get(current)){
-                if(!visited.contains(neighbor))
-                    queue.add(neighbor);
-            } )
         }
+        return visited;
     }
+}

@@ -53,4 +53,16 @@ getNeighbors(): Get the neighbors of each node without duplicates.
 size(): Returns the size of the graph based on the number of nodes.
 
 
+# Graph Breadth First
 
+## Challenge Summary
+Implement a breadth-first traversal on a graph. And return a collection of nodes in the order they were visited.
+
+## Whiteboard Process
+![Graph Breadth First](breadth-first-traverse.jpg)
+
+## Approach & Efficiency
+
+Time: O(n^2)
+
+Space: O(n)
