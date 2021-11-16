@@ -7,6 +7,10 @@ public class Graph {
         private String label;
         int weight;
 
+        public Node(String label) {
+            this.label = label;
+        }
+
         public Node(String label, int weight) {
             this.label = label;
             this.weight = weight;
@@ -33,7 +37,7 @@ public class Graph {
     private Map<String, Node> nodes = new HashMap<>();
 
     public Node addNode(String value) {
-        Node node = new Node(value, 0);
+        Node node = new Node(value);
         nodes.putIfAbsent(value, node);
         adjacencyList.putIfAbsent(node, new ArrayList<>());
         return node;
@@ -56,7 +60,7 @@ public class Graph {
     }
 
     public List<Node> getNeighbors(String value) {
-        Node collection = new Node(value, 0);
+        Node collection = new Node(value);
         return adjacencyList.get(collection);
     }
 
@@ -121,7 +125,6 @@ public class Graph {
         }
         return "True, $" + cost;
     }
-
     private int findWeight(Graph graph, String city1, String city2) {
         for (Node vertex : graph.getNeighbors(city1)) {
             if (Objects.equals(city2, vertex.label)) {
@@ -130,5 +133,4 @@ public class Graph {
         }
         return 0;
     }
-
 }

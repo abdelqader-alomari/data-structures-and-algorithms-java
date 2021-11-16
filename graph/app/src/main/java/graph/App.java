@@ -77,7 +77,6 @@ public class App {
 
         List<String> cities = new ArrayList<>();
         cities.add("Pandora");
-        cities.add("Arendelle");
         cities.add("Metroville");
 
         List<String> cities1 = new ArrayList<>();
@@ -85,8 +84,14 @@ public class App {
         cities1.add("Naboo");
         cities1.add("Metroville");
 
+        List<String> cities2 = new ArrayList<>();
+        cities2.add("Pandora");
+        cities2.add("Arendelle");
+        cities2.add("Metroville");
+
         System.out.println("First Trip ---> " + graph2.businessTrip(graph2, cities));
         System.out.println("Second Trip ---> " + graph2.businessTrip(graph2, cities1));
+        System.out.println("Third Trip ---> " + graph2.businessTrip(graph2, cities2));
     }
 
 }

@@ -6,6 +6,9 @@ package graph;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 class AppTest {
     @Test void appHasAGreeting() {
         App classUnderTest = new App();

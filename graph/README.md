@@ -39,7 +39,6 @@ Implement your own Graph. The graph should be represented as an adjacency list, 
   Time: O(1)
   Space: O(1)
 
-
 ## API
 
 addNode(): Add nodes to the graph.
@@ -52,13 +51,14 @@ getNeighbors(): Get the neighbors of each node without duplicates.
 
 size(): Returns the size of the graph based on the number of nodes.
 
-
 # Graph Breadth First
 
 ## Challenge Summary
+
 Implement a breadth-first traversal on a graph. And return a collection of nodes in the order they were visited.
 
 ## Whiteboard Process
+
 ![Graph Breadth First](breadth-first-traverse.jpg)
 
 ## Approach & Efficiency
@@ -66,3 +66,22 @@ Implement a breadth-first traversal on a graph. And return a collection of nodes
 Time: O(n^2)
 
 Space: O(n)
+
+- - -
+
+# Graph Business Trip
+
+## Challenge Summary
+
+Write a function called business trip with Arguments: graph, array of city names and Return: cost or null
+Determine whether the trip is possible with direct flights, and how much it would cost.
+
+## Whiteboard Process
+
+![Graph Business Trip](graph-business-trip.jpg)
+
+## Approach & Efficiency
+
+Time: O(n^2)
+
+Space: O(1)
