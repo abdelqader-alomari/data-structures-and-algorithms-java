@@ -220,6 +220,56 @@ class AppTest {
 
         assertEquals("False, $0", test.businessTrip(test, path3));
     }
+    @Test
+    public void depthFirst(){
+
+        Graph test = new Graph();
+
+        test.addNode("A");
+        test.addNode("B");
+        test.addNode("C");
+        test.addNode("D");
+        test.addNode("E");
+        test.addNode("F");
+        test.addNode("G");
+        test.addNode("H");
+
+        test.addEdge("A", "D");
+        test.addEdge("A", "B");
+        test.addEdge("B", "D");
+        test.addEdge("B", "C");
+        test.addEdge("C", "G");
+        test.addEdge("D", "F");
+        test.addEdge("D", "H");
+        test.addEdge("D", "E");
+        test.addEdge("F", "H");
+
+        assertEquals("[A, B, C, G, D, E, H, F]", test.depthFirst("A").toString());
+    }
+
+    @Test
+    public void depthFirstOneNode(){
+
+        Graph test = new Graph();
+
+        test.addNode("A");
+
+        assertEquals("[A]", test.depthFirst("A").toString());
+    }
+
+    @Test
+    public void depthFirst1NotConnected(){
+
+        Graph test = new Graph();
+
+        test.addNode("A");
+        test.addNode("B");
+        test.addNode("C");
+
+        test.addEdge("A", "B");
+
+        assertEquals("[A, B]", test.depthFirst("A").toString());
+    }
 
 
 }

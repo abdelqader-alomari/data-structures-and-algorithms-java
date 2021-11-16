@@ -81,7 +81,7 @@ public class Graph {
 
     public Set<String> breadthFirst_traversal(String root) {
         Node node = nodes.get(root);
-        if(node == null){
+        if (node == null) {
             return null;
         }
         Set<String> visited = new LinkedHashSet<>();
@@ -104,7 +104,6 @@ public class Graph {
         Node Vertex1 = new Node(data1, weight);
         Node Vertex2 = new Node(data2, weight);
 
-
         adjacencyList.get(Vertex1).add(Vertex2);
         adjacencyList.get(Vertex2).add(Vertex1);
     }
@@ -125,6 +124,7 @@ public class Graph {
         }
         return "True, $" + cost;
     }
+
     private int findWeight(Graph graph, String city1, String city2) {
         for (Node vertex : graph.getNeighbors(city1)) {
             if (Objects.equals(city2, vertex.label)) {
@@ -133,4 +133,25 @@ public class Graph {
         }
         return 0;
     }
+
+    Set<String> depthFirst(String root) {
+        if (root == null)
+            return null;
+        Set<String> visited = new LinkedHashSet<>();
+        Stack<String> stack = new Stack<>();
+        stack.push(root);
+
+        while (!stack.isEmpty()) {
+            String vertex = stack.pop();
+            if (!visited.contains(vertex)) {
+                visited.add(vertex);
+
+                for (Node node : getNeighbors(vertex)) {
+                    stack.push(node.label);
+                }
+            }
+        }
+        return visited;
+    }
+
 }

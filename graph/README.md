@@ -85,3 +85,20 @@ Determine whether the trip is possible with direct flights, and how much it woul
 Time: O(n^2)
 
 Space: O(1)
+
+# Graph Depth First
+
+## Challenge Summary
+
+Conduct a depth first preorder traversal on a graph, Arguments: Node (Starting point of search)
+Return: A collection of nodes in their pre-order depth-first traversal order and display the collection
+
+## Whiteboard Process
+
+![graph-depth-first](graph-depth-first.jpg)
+
+## Approach & Efficiency
+
+Time : O(n^2)
+
+Space : O(n)
