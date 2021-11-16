@@ -123,6 +123,100 @@ class AppTest {
 
         assertEquals("[Pandora, Arendelle]", graph.breadthFirst_traversal("Pandora").toString());
     }
+    @Test
+    public void empty() {
+
+        Graph test = new Graph();
+        List<String> path = new ArrayList<>();
+
+        assertEquals("null", test.businessTrip(test, path));
+    }
+
+    @Test
+    public void listItem() {
+
+        Graph test = new Graph();
+        List<String> path = new ArrayList<>();
+
+        test.addNode("Pandora");
+        test.addNode("Arendelle");
+        test.addNode("Metroville");
+        test.addNode("Monstroplolis");
+        test.addNode("Narnia");
+        test.addNode("Naboo");
+
+        test.addEdgeWithWeight("Pandora", "Arendelle", 150);
+        test.addEdgeWithWeight("Pandora", "Metroville", 82);
+
+
+        test.addEdgeWithWeight("Arendelle", "Metroville", 99);
+        test.addEdgeWithWeight("Arendelle", "Monstroplolis", 42);
+
+        test.addEdgeWithWeight("Metroville", "Monstroplolis", 105);
+        test.addEdgeWithWeight("Metroville", "Narnia", 37);
+        test.addEdgeWithWeight("Metroville", "Naboo", 26);
+
+        test.addEdgeWithWeight("Monstroplolis", "Naboo", 73);
+        test.addEdgeWithWeight("Narnia", "Naboo", 250);
+
+        path.add("Metroville");
+
+        assertEquals("null", test.businessTrip(test, path));
+
+    }
+
+    @Test
+    public void testDifferentPaths() {
+
+        Graph test = new Graph();
+        List<String> path = new ArrayList<>();
+
+        test.addNode("Pandora");
+        test.addNode("Arendelle");
+        test.addNode("Metroville");
+        test.addNode("Monstroplolis");
+        test.addNode("Narnia");
+        test.addNode("Naboo");
+
+        test.addEdgeWithWeight("Pandora", "Arendelle", 150);
+        test.addEdgeWithWeight("Pandora", "Metroville", 82);
+
+
+        test.addEdgeWithWeight("Arendelle", "Metroville", 99);
+        test.addEdgeWithWeight("Arendelle", "Monstroplolis", 42);
+
+        test.addEdgeWithWeight("Metroville", "Monstroplolis", 105);
+        test.addEdgeWithWeight("Metroville", "Narnia", 37);
+        test.addEdgeWithWeight("Metroville", "Naboo", 26);
+
+        test.addEdgeWithWeight("Monstroplolis", "Naboo", 73);
+        test.addEdgeWithWeight("Narnia", "Naboo", 250);
+
+        path.add("Metroville");
+        path.add("Pandora");
+
+        assertEquals("True, $82", test.businessTrip(test, path));
+
+        List<String> path1 = new ArrayList<>();
+        path1.add("Arendelle");
+        path1.add("Monstroplolis");
+        path1.add("Naboo");
+
+        assertEquals("True, $115", test.businessTrip(test, path1));
+
+        List<String> path2 = new ArrayList<>();
+        path2.add("Naboo");
+        path2.add("Pandora");
+
+        assertEquals("False, $0", test.businessTrip(test, path2));
+
+        List<String> path3 = new ArrayList<>();
+        path3.add("Narnia");
+        path3.add("Arendelle");
+        path3.add("Naboo");
+
+        assertEquals("False, $0", test.businessTrip(test, path3));
+    }
 
 
 }

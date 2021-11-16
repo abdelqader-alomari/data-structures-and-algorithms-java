@@ -5,9 +5,11 @@ import java.util.*;
 public class Graph {
     private class Node {
         private String label;
+        int weight;
 
-        public Node(String label) {
+        public Node(String label, int weight) {
             this.label = label;
+            this.weight = weight;
         }
 
         @Override
@@ -31,7 +33,7 @@ public class Graph {
     private Map<String, Node> nodes = new HashMap<>();
 
     public Node addNode(String value) {
-        Node node = new Node(value);
+        Node node = new Node(value, 0);
         nodes.putIfAbsent(value, node);
         adjacencyList.putIfAbsent(node, new ArrayList<>());
         return node;
@@ -54,7 +56,7 @@ public class Graph {
     }
 
     public List<Node> getNeighbors(String value) {
-        Node collection = new Node(value);
+        Node collection = new Node(value, 0);
         return adjacencyList.get(collection);
     }
 
@@ -93,4 +95,40 @@ public class Graph {
         }
         return visited;
     }
+
+    public void addEdgeWithWeight(String data1, String data2, int weight) {
+        Node Vertex1 = new Node(data1, weight);
+        Node Vertex2 = new Node(data2, weight);
+
+
+        adjacencyList.get(Vertex1).add(Vertex2);
+        adjacencyList.get(Vertex2).add(Vertex1);
+    }
+
+    public String businessTrip(Graph graph, List<String> citiesNames) {
+        int cost = 0;
+        if (citiesNames.size() <= 1)
+            return "null";
+
+        int findWeight;
+        for (int i = 0; i < citiesNames.size() - 1; i++) {
+            findWeight = findWeight(graph, citiesNames.get(i), citiesNames.get(i + 1));
+
+            if (findWeight == 0)
+                return "False, $0";
+
+            cost += findWeight;
+        }
+        return "True, $" + cost;
+    }
+
+    private int findWeight(Graph graph, String city1, String city2) {
+        for (Node vertex : graph.getNeighbors(city1)) {
+            if (Objects.equals(city2, vertex.label)) {
+                return vertex.weight;
+            }
+        }
+        return 0;
+    }
+
 }
